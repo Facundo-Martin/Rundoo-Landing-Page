@@ -4,7 +4,7 @@ import Image from 'next/image';
 import RenderAdditionalInfo from '../components/AdditionalInfo/RenderAdditionalInfo';
 import RenderContact from '../components/Contact/RenderContact';
 import RenderCTA from '../components/CTA/RenderCTA';
-import RenderFAQs from '../components/FAQs/RenderFaqs';
+import RenderFAQs from '../components/FAQs/RenderFAQs';
 import RenderFeatures from '../components/Features/RenderFeatures';
 import RenderHero from '../components/Hero/RenderHero';
 import Layout from '../components/Layout/Layout';
