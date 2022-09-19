@@ -1,22 +1,30 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import NavLink from '../UI/NavLink';
 import MobileNavigation from './MobileNavigation';
 import DesktopNavigation from './DesktopNavigation';
+import Logo from '../UI/Logo';
 
-function Header() {
+export default function Header() {
   return (
-    <div className="global-style">
-      <div className="wrapper flex items-center justify-between py-6 bg-pink-100">
-        <Link href="/">
-          <a className="w-10 hover:scale-110 transform transition ease-in-out duration-700">
-            <Image src="/vercel.svg" alt="profile image" width={20} height={20} layout="responsive" />
-          </a>
-        </Link>
-        <DesktopNavigation />
-        <MobileNavigation />
-      </div>
-    </div>
+    <header className="py-10 wrapper section">
+      <nav className="relative z-50 flex justify-between">
+        <div className="flex items-center md:gap-x-12">
+          <Logo />
+          <DesktopNavigation />
+        </div>
+        <div className="flex items-center gap-x-5 md:gap-x-8">
+          <div className="hidden md:block">
+            <NavLink href="/login">Sign in</NavLink>
+          </div>
+          <button color="blue">
+            <span>
+              Get started <span className="hidden lg:inline">today</span>
+            </span>
+          </button>
+          <div className="-mr-1 md:hidden">
+            <MobileNavigation />
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
-
-export default Header;
