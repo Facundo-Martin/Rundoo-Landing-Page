@@ -1,11 +1,9 @@
-import { Fragment } from 'react';
 import Link from 'next/link';
-import { Popover, Transition } from '@headlessui/react';
-import clsx from 'clsx';
 import NavLink from '../UI/NavLink';
 import Image from 'next/image';
 import Rundoo from '../../images/Rundoo.svg';
 import MobileNavigation from './MobileNavigation';
+import DesktopNavigation from './DesktopNavigation';
 
 export default function Header() {
   return (
@@ -20,12 +18,7 @@ export default function Header() {
               </div>
             </a>
           </Link>
-          <div className="hidden md:flex md:gap-x-6">
-            <NavLink href="#features">Features</NavLink>
-            <NavLink href="#team">Team</NavLink>
-            <NavLink href="#FAQs">FAQs</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
-          </div>
+          <DesktopNavigation />
         </div>
         <div className="flex items-center gap-x-5 md:gap-x-8">
           <div className="hidden md:block">
