@@ -75,10 +75,7 @@ export default function Header() {
               </a>
             </div>
           </div>
-          <div
-            onclick="document.getElementById('menu').classNameList.toggle('hidden')"
-            className="md:hidden select-none block cursor-pointer hover:bg-gray-100 p-1.5 rounded-md"
-          >
+          <div className="md:hidden select-none block cursor-pointer hover:bg-gray-100 p-1.5 rounded-md">
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill-rule="evenodd"
