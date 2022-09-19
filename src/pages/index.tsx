@@ -14,7 +14,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title> Home | Facundo Martin</title>
+        <title>Rundoo</title>
+        <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sint!" />
       </Head>
       <Layout>
         <>
