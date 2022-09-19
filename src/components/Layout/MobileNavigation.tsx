@@ -1,78 +1,73 @@
-import { Popover, Transition } from '@headlessui/react';
-import Link from 'next/link';
 import { Fragment } from 'react';
-import { ChevronDownIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import ThemeChanger from './ThemeChanger';
+import Link from 'next/link';
+import { Popover, Transition } from '@headlessui/react';
+import clsx from 'clsx';
 
-type MobileNavItemProps = {
-  children: React.ReactNode;
+type MobileNavLinkProps = {
   href: string;
+  children: React.ReactNode;
 };
-function MobileNavItem({ href, children }: MobileNavItemProps) {
+function MobileNavLink({ href, children }: MobileNavLinkProps) {
   return (
-    <li>
-      <Popover.Button as={Link} href={href}>
-        <span className="block py-2 bg-pink cursor-pointer"> {children}</span>
+    <Popover.Button as={Link} href={href} className="block w-full p-2">
+      {children}
+    </Popover.Button>
+  );
+}
+type MobileNavIcon = {
+  open: boolean;
+};
+function MobileNavIcon({ open }: MobileNavIcon) {
+  return (
+    <svg aria-hidden="true" className="h-3.5 w-3.5 overflow-visible stroke-slate-700" fill="none" strokeWidth={2} strokeLinecap="round">
+      <path d="M0 1H14M0 7H14M0 13H14" className={clsx('origin-center transition', open && 'scale-90 opacity-0')} />
+      <path d="M2 2L12 12M12 2L2 12" className={clsx('origin-center transition', !open && 'scale-90 opacity-0')} />
+    </svg>
+  );
+}
+
+export default function MobileNavigation() {
+  return (
+    <Popover>
+      <Popover.Button
+        className="relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+        aria-label="Toggle Navigation"
+      >
+        {({ open }) => <MobileNavIcon open={open} />}
       </Popover.Button>
-    </li>
+      <Transition.Root>
+        <Transition.Child
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="duration-150 ease-in"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Popover.Overlay className="fixed inset-0 bg-slate-300/50" />
+        </Transition.Child>
+        <Transition.Child
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="duration-100 ease-in"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          <Popover.Panel
+            as="div"
+            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+          >
+            <MobileNavLink href="#features">Features</MobileNavLink>
+            <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
+            <MobileNavLink href="#pricing">Pricing</MobileNavLink>
+            <hr className="m-2 border-slate-300/40" />
+            <MobileNavLink href="/login">Sign in</MobileNavLink>
+          </Popover.Panel>
+        </Transition.Child>
+      </Transition.Root>
+    </Popover>
   );
 }
-
-function MobileNavigation() {
-  return (
-    <div className="md:hidden flex items-center gap-x-6">
-      <ThemeChanger />
-      <Popover className="pointer-events-auto md:hidden">
-        <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
-          Menu
-          <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
-        </Popover.Button>
-        <Transition.Root>
-          <Transition.Child
-            as={Fragment}
-            enter="duration-150 ease-out"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="duration-150 ease-in"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Popover.Overlay className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80" />
-          </Transition.Child>
-          <Transition.Child
-            as={Fragment}
-            enter="duration-150 ease-out"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="duration-150 ease-in"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            <Popover.Panel
-              focus
-              className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
-            >
-              <div className="flex flex-row-reverse items-center justify-between">
-                <Popover.Button aria-label="Close menu" className="-m-1 p-1">
-                  <XMarkIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
-                </Popover.Button>
-                <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Navigation</h2>
-              </div>
-              <nav className="mt-6">
-                <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                  <MobileNavItem href="/about">About</MobileNavItem>
-                  <MobileNavItem href="/articles">Articles</MobileNavItem>
-                  <MobileNavItem href="/projects">Projects</MobileNavItem>
-                  <MobileNavItem href="/speaking">Speaking</MobileNavItem>
-                  <MobileNavItem href="/uses">Uses</MobileNavItem>
-                </ul>
-              </nav>
-            </Popover.Panel>
-          </Transition.Child>
-        </Transition.Root>
-      </Popover>
-    </div>
-  );
-}
-
-export default MobileNavigation;
