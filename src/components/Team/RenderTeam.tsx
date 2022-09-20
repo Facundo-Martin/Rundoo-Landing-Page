@@ -1,5 +1,7 @@
 import React from 'react';
+import TeamCard from './TeamCard';
 
+const team = [1, 1, 1, 1, 1];
 function RenderTeam() {
   return (
     <section className="w-full py-12 bg-white lg:py-24 tails-selected-element">
@@ -14,6 +16,9 @@ function RenderTeam() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {team.map((teammate) => (
+            <TeamCard teammate={teammate} />
+          ))}
           <div className="w-full border border-gray-200 rounded-lg shadow-sm">
             <div className="flex flex-col items-center justify-center p-10">
               <img className="w-32 h-32 mb-6 rounded-full" src="https://cdn.devdojo.com/images/june2021/headshot2.jpg" />
