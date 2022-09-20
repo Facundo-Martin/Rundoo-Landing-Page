@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import screenshotContacts from '../../images/contacts.webp';
 import screenshotInventory from '../../images/inventory.webp';
 import screenshotProfitLoss from '../../images/profit-loss.webp';
+import FeaturesMobile from './FeaturesMobile';
 
 const features = [
   {
@@ -67,7 +68,7 @@ interface FeatureProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
   isActive: boolean;
   className?: string;
 }
-function Feature({ feature, isActive, className, ...props }: FeatureProps) {
+export function Feature({ feature, isActive, className, ...props }: FeatureProps) {
   return (
     <div className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')} {...props}>
       <div className={clsx('w-9 rounded-lg', isActive ? 'bg-blue-600' : 'bg-slate-500')}>
@@ -77,24 +78,7 @@ function Feature({ feature, isActive, className, ...props }: FeatureProps) {
       </div>
       <h3 className={clsx('mt-6 text-sm font-medium', isActive ? 'text-blue-600' : 'text-slate-600')}>{feature.name}</h3>
       <p className="mt-2 font-display text-xl text-slate-900">{feature.summary}</p>
-    </div>
-  );
-}
-
-function FeaturesMobile() {
-  return (
-    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-      {features.map((feature) => (
-        <div key={feature.name}>
-          <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
-          <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <Image className="w-full" src={feature.image} alt="" sizes="52.75rem" />
-            </div>
-          </div>
-        </div>
-      ))}
+      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
     </div>
   );
 }
@@ -159,7 +143,7 @@ function RenderFeatures() {
             Because you’d probably be a little confused if we suggested you complicate your everyday business tasks instead.
           </p>
         </div>
-        <FeaturesMobile />
+        <FeaturesMobile features={features} />
         <FeaturesDesktop />
       </div>
     </section>
