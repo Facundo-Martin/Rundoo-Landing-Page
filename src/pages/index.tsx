@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRef } from 'react';
 import RenderAdditionalInfo from '../components/AdditionalInfo/RenderAdditionalInfo';
 import RenderContact from '../components/Contact/RenderContact';
 import RenderCTA from '../components/CTA/RenderCTA';
-import RenderFAQs from '../components/FAQs/RenderFaqs';
+import RenderFAQs from '../components/FAQs/RenderFAQs';
 import RenderFeatures from '../components/Features/RenderFeatures';
 import RenderHero from '../components/Hero/RenderHero';
 import Layout from '../components/Layout/Layout';
@@ -14,7 +15,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title> Home | Facundo Martin</title>
+        <title>Rundoo</title>
+        <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sint!" />
       </Head>
       <Layout>
         <>
