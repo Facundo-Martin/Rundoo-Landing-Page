@@ -2,39 +2,30 @@ import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '400px',
-  height: '400px',
+  width: '100%',
+  height: '100%',
 };
-
 const center = {
-  lat: 37.49456,
-  lng: -122.2291,
+  lat: 37.494744607467815,
+  lng: -122.22848885266833,
 };
 export default function ContactMap() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: 'AIzaSyA8_4azs9OKZB4llcB4IntYA0kiym3kV1U',
   });
-  const [map, setMap] = React.useState(null);
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-    setMap(map);
-  }, []);
-
-  const onUnmount = React.useCallback(function callback(map) {
-    setMap(null);
-  }, []);
 
   if (!isLoaded) {
     return <div>ContactMap</div>;
   }
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} onLoad={onLoad} onUnmount={onUnmount}>
-      {/* Child components, such as markers, info windows, etc. */}
-      <>
-        <Marker position={center} />
-      </>
-    </GoogleMap>
+    <div className="w-[550px] h-[400px] shadow-md rounded-md overflow-hidden">
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+        {/* Child components, such as markers, info windows, etc. */}
+        <>
+          <Marker position={center} />
+        </>
+      </GoogleMap>
+    </div>
   );
 }
