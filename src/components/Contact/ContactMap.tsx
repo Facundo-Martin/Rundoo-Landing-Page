@@ -1,5 +1,38 @@
 import React from 'react';
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
-export default function Map() {
-  return <div>ContactMap</div>;
+const containerStyle = {
+  width: '400px',
+  height: '400px',
+};
+
+const center = {
+  lat: -3.745,
+  lng: -38.523,
+};
+export default function ContactMap() {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: 'YOUR_API_KEY',
+  });
+  const [map, setMap] = React.useState(null);
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+    setMap(map);
+  }, []);
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
+  if (!isLoaded) {
+    return <div>ContactMap</div>;
+  }
+  return (
+    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10} onLoad={onLoad} onUnmount={onUnmount}>
+      {/* Child components, such as markers, info windows, etc. */}
+      <></>
+    </GoogleMap>
+  );
 }
