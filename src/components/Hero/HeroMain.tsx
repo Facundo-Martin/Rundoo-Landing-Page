@@ -1,11 +1,11 @@
 import React from 'react';
 
 type HeroMainProps = {
-  setShowMore: (show: false) => void;
+  setShowMore: (show: boolean) => void;
 };
 function HeroMain({ setShowMore }: HeroMainProps) {
   return (
-    <section className="section">
+    <>
       <div className="left-0 h-auto w-1/2 top-1/2 -translate-y-1/2 transform rotate-180 absolute opacity-20">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
         <img src="https://cdn.devdojo.com/assets/patterns/pattern-01.svg" />
@@ -53,7 +53,7 @@ function HeroMain({ setShowMore }: HeroMainProps) {
             </div>
           </div>
 
-          <div className="lg:w-1/2 flex-shrink-0 h-full lg:pt-0 pt-24">
+          <div className="max-w-xl lg:w-1/2 flex-shrink-0 h-full lg:pt-0 pt-24">
             <div className="relative h-full w-full pl-12 lg:pr-0 pr-10">
               <div className="h-auto transform xl:translate-x-8 translate-y-2 w-32 sm:w-56 xl:w-64  absolute border border-gray-100 left-0 bottom-0 z-10 rounded-lg shadow-2xl overflow-hidden p-2 bg-white">
                 <img src="https://cdn.devdojo.com/images/january2022/chart-1.png" className="" />
@@ -70,7 +70,7 @@ function HeroMain({ setShowMore }: HeroMainProps) {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 
