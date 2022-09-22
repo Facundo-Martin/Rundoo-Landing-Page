@@ -1,5 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { BoltIcon, ChatBubbleBottomCenterTextIcon, EnvelopeIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
+import { ArrowSmallLeftIcon, BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
 
 const transferFeatures = [
   {
@@ -32,7 +32,12 @@ export default function HeroLearnMore({ setShowMore }: HeroLearnMoreProps) {
   return (
     <div className="overflow-hidden section bg-gray-50">
       <div className="">
-        <button onClick={() => setShowMore(false)}>Go Back</button>
+        <button onClick={() => setShowMore(false)} className="">
+          <div className="flex items-center gap-2 group">
+            <ArrowSmallLeftIcon className="w-7 group-hover:-translate-x-[6px] transition-all ease-in-out duration-700 transform" />
+            <p className="text-lg ">Go Back</p>
+          </div>
+        </button>
         <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div className="relative">
             <h3 className="hidden lg:block text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Transfer funds world-wide</h3>
