@@ -35,8 +35,8 @@ export default function HeroLearnMore({ setShowMore }: HeroLearnMoreProps) {
         <button onClick={() => setShowMore(false)}>Go Back</button>
         <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div className="relative">
-            <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Transfer funds world-wide</h3>
-            <p className="mt-3 text-lg text-gray-500">
+            <h3 className="hidden lg:block text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Transfer funds world-wide</h3>
+            <p className="hidden lg:block mt-3 text-lg text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores officia assumenda aliquam laborum ab
               aliquid veritatis impedit odit adipisci optio iste blanditiis facere. Totam, velit.
             </p>
