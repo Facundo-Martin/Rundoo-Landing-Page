@@ -1,30 +1,57 @@
+import { gql, useQuery } from '@apollo/client';
 import React from 'react';
 import TeamCard from './TeamCard';
 
-const team = [
-  {
-    name: 'John Doe',
-    avatar: 'https://cdn.devdojo.com/images/june2021/headshot2.jpg',
-    role: 'CEO and Founder',
-    since: 2015,
-    socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
-  },
-  {
-    name: 'Mike Smith',
-    avatar: 'https://cdn.devdojo.com/images/june2021/headshotguy.jpg',
-    role: 'CTO and Co-Founder',
-    since: 2015,
-    socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
-  },
-  {
-    name: 'Kelly Rogers',
-    avatar: 'https://cdn.devdojo.com/images/june2021/headshot-female.jpg',
-    role: 'Designer',
-    since: 2018,
-    socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
-  },
-];
+// const team = [
+//   {
+//     name: 'John Doe',
+//     avatar: 'https://cdn.devdojo.com/images/june2021/headshot2.jpg',
+//     role: 'CEO and Founder',
+//     since: 2015,
+//     socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
+//   },
+//   {
+//     name: 'Mike Smith',
+//     avatar: 'https://cdn.devdojo.com/images/june2021/headshotguy.jpg',
+//     role: 'CTO and Co-Founder',
+//     since: 2015,
+//     socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
+//   },
+//   {
+//     name: 'Kelly Rogers',
+//     avatar: 'https://cdn.devdojo.com/images/june2021/headshot-female.jpg',
+//     role: 'Designer',
+//     since: 2018,
+//     socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
+//   },
+// ];
+const GET_TEAM = gql`
+  query Team {
+    members {
+      data {
+        id
+        attributes {
+          name
+          role
+          since
+          linkedin
+          twitter
+          github
+          avatar {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 function RenderTeam() {
+  const { loading, error, data } = useQuery(GET_TEAM);
+  console.log('IN TEAMS', data?.members.data, loading, error);
   return (
     <section className="w-full py-12 bg-white lg:py-24 tails-selected-element">
       <div className="max-w-6xl px-12 mx-auto text-center">
@@ -37,11 +64,7 @@ function RenderTeam() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {team.concat(team, team).map((teammate) => (
-            <TeamCard teammate={teammate} />
-          ))}
-        </div>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">{data && data.members.data.map((member) => <TeamCard member={member} />)}</div>
       </div>
     </section>
   );
