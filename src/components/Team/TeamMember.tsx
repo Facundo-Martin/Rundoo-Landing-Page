@@ -6,21 +6,22 @@ type SocialLinkProps = {
   children: React.ReactNode;
 };
 function SocialLink({ href, children }: SocialLinkProps) {
+  const socialStyle = 'flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500';
   if (href) {
     return (
-      <a href={href} className="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">
+      <a href={href} className={socialStyle}>
         {children}
       </a>
     );
   } else {
-    return <div className="flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500">{children}</div>;
+    return <div className={socialStyle}>{children}</div>;
   }
 }
-function TeamCard({ member }) {
+function TeamMember({ member }) {
   if (member.attributes) {
     const avatarURL = member.attributes.avatar?.data?.attributes?.url ? member.attributes.avatar.data.attributes.url : null;
     return (
-      <div className="w-full border border-gray-200 rounded-lg shadow-sm">
+      <div className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm">
         <div className="flex flex-col items-center justify-center p-10">
           <img className="w-32 h-32 mb-6 rounded-full" src={avatarURL} />
           <h2 className="text-lg font-medium">{member.attributes.name}</h2>
@@ -44,4 +45,4 @@ function TeamCard({ member }) {
   }
 }
 
-export default TeamCard;
+export default TeamMember;
