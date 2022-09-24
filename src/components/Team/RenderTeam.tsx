@@ -1,29 +1,7 @@
 import React from 'react';
 import TeamCard from './TeamCard';
+import {team} from '../../utils/utils'
 
-const team = [
-  {
-    name: 'John Doe',
-    avatar: 'https://cdn.devdojo.com/images/june2021/headshot2.jpg',
-    role: 'CEO and Founder',
-    since: 2015,
-    socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
-  },
-  {
-    name: 'Mike Smith',
-    avatar: 'https://cdn.devdojo.com/images/june2021/headshotguy.jpg',
-    role: 'CTO and Co-Founder',
-    since: 2015,
-    socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
-  },
-  {
-    name: 'Kelly Rogers',
-    avatar: 'https://cdn.devdojo.com/images/june2021/headshot-female.jpg',
-    role: 'Designer',
-    since: 2018,
-    socials: { twitter: 'twitter', github: 'github', linkedin: 'linkedin' },
-  },
-];
 function RenderTeam() {
   return (
     <section className="w-full py-12 bg-white lg:py-24 tails-selected-element">
@@ -38,7 +16,7 @@ function RenderTeam() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {team.concat(team, team).map((teammate) => (
+          {team.map((teammate) => (
             <TeamCard teammate={teammate} />
           ))}
         </div>
