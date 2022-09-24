@@ -11,7 +11,7 @@ function SocialLink({ href, children }: SocialLinkProps) {
   const socialStyle = 'flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500';
   if (href) {
     return (
-      <a href={href} target="_blank" className={socialStyle}>
+      <a href={href} rel="noreferrer" target="_blank" className={socialStyle}>
         {children}
       </a>
     );
