@@ -1,6 +1,6 @@
-import { Divide } from 'hamburger-react';
 import Image from 'next/image';
 import React from 'react';
+import { Person } from '../../utils/utils';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../UI/SocialIcons';
 
 type SocialLinkProps = {
@@ -11,7 +11,7 @@ function SocialLink({ href, children }: SocialLinkProps) {
   const socialStyle = 'flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500';
   if (href) {
     return (
-      <a href={href} className={socialStyle}>
+      <a href={href} target="_blank" className={socialStyle}>
         {children}
       </a>
     );
@@ -19,7 +19,10 @@ function SocialLink({ href, children }: SocialLinkProps) {
     return <div className={socialStyle}>{children}</div>;
   }
 }
-function TeamCard({ member }) {
+type TeamCardProps = {
+  member: Person;
+};
+function TeamCard({ member }: TeamCardProps) {
   const avatarURL = member.avatar ? member.avatar : null;
   return (
     <div className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm">
@@ -33,13 +36,13 @@ function TeamCard({ member }) {
       </div>
 
       <div className="flex border-t border-gray-200 divide-x divide-gray-200">
-        <SocialLink href={member.socials.twitter ? member.socials.twitter : null}>
+        <SocialLink href={member.socials.twitter ? member.socials.twitter : ''}>
           <TwitterIcon />
         </SocialLink>
-        <SocialLink href={member.socials.github ? member.socials.github : null}>
+        <SocialLink href={member.socials.github ? member.socials.github : ''}>
           <GithubIcon />
         </SocialLink>
-        <SocialLink href={member.socials.linkedin ? member.socials.linkedin : null}>
+        <SocialLink href={member.socials.linkedin ? member.socials.linkedin : ''}>
           <LinkedInIcon />
         </SocialLink>
       </div>
