@@ -92,7 +92,7 @@ export const team: Person[] = [
   {
     name: 'Santiago Aguilar',
     avatar: SantiagoAguilar,
-    role: 'Software Engineer Intern',
+    role: 'Software Engineer',
     since: 2022,
     socials: { twitter: '', github: '', linkedin: 'https://www.linkedin.com/in/aguilar-santiago/' },
   },

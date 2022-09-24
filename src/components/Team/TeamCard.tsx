@@ -24,7 +24,7 @@ function TeamCard({ member }) {
   return (
     <div className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm">
       <div className="flex flex-col items-center justify-center p-10">
-        <div className="w-20 h-20 rounded-full">
+        <div className="w-24 h-24 rounded-full mb-4">
           {avatarURL ? <Image src={avatarURL} width={150} height={150} layout="responsive" className="rounded-full" /> : <div>No image</div>}
         </div>
         <h2 className="text-lg font-medium">{member.name}</h2>
