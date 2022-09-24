@@ -16,8 +16,8 @@ function RenderTeam() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {team.map((teammate) => (
-            <TeamCard teammate={teammate} />
+          {team.map((member) => (
+            <TeamCard member={member} />
           ))}
         </div>
       </div>
