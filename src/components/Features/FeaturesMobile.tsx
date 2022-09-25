@@ -1,11 +1,14 @@
 import Image from 'next/image';
-import { Feature } from './RenderFeatures';
+import { Feature, FeatureType } from './RenderFeatures';
 
-function FeaturesMobile({ features }) {
+type FeaturesMobileProps = {
+  features: FeatureType[];
+};
+function FeaturesMobile({ features }: FeaturesMobileProps) {
   return (
     <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-      {features.map((feature) => (
-        <div key={feature.name}>
+      {features.map((feature, featureIndex) => (
+        <div key={featureIndex}>
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
