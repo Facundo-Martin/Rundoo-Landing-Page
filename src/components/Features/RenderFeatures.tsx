@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, useId } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, JSXElementConstructor, useId } from 'react';
 import Image from 'next/future/image';
 import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
@@ -7,7 +7,14 @@ import screenshotInventory from '../../images/inventory.webp';
 import screenshotProfitLoss from '../../images/profit-loss.webp';
 import FeaturesMobile from './FeaturesMobile';
 import FeaturesDesktop from './FeaturesDesktop';
+import { StaticImageData } from 'next/image';
 
+export type FeatureType = {
+  name: string | JSX.Element;
+  summary: string;
+  image: StaticImageData;
+  icon: () => JSX.Element;
+};
 const features = [
   {
     name: 'Reporting',
@@ -65,7 +72,7 @@ const features = [
 ];
 
 interface FeatureProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  feature: any;
+  feature: FeatureType;
   isActive: boolean;
   className?: string;
 }
@@ -79,7 +86,6 @@ export function Feature({ feature, isActive, className, ...props }: FeatureProps
       </div>
       <h3 className={clsx('mt-6 text-sm font-medium', isActive ? 'text-blue-600' : 'text-slate-600')}>{feature.name}</h3>
       <p className="mt-2 font-display text-xl text-slate-900">{feature.summary}</p>
-      <p className="mt-4 text-sm text-slate-600">{feature.description}</p>
     </div>
   );
 }

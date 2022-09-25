@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import { Tab } from '@headlessui/react';
-import { Feature } from './RenderFeatures';
+import { Feature, FeatureType } from './RenderFeatures';
 import clsx from 'clsx';
 
-function FeaturesDesktop({ features }) {
+type FeatureProps = {
+  features: FeatureType[];
+};
+function FeaturesDesktop({ features }: FeatureProps) {
   return (
     <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
       {({ selectedIndex }) => (
@@ -11,7 +14,7 @@ function FeaturesDesktop({ features }) {
           <Tab.List className="grid grid-cols-3 gap-x-8">
             {features.map((feature, featureIndex) => (
               <Feature
-                key={feature.name}
+                key={featureIndex}
                 feature={{
                   ...feature,
                   name: (
@@ -31,7 +34,7 @@ function FeaturesDesktop({ features }) {
               {features.map((feature, featureIndex) => (
                 <Tab.Panel
                   static
-                  key={feature.name}
+                  key={featureIndex}
                   className={clsx(
                     'px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none',
                     featureIndex !== selectedIndex && 'opacity-60'
