@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="py-10 wrapper section">
+    <header className="py-10 wrapper section global-style">
       <nav className="relative z-50 flex justify-between">
         <div className="w-full flex items-center justify-between">
           <Logo />

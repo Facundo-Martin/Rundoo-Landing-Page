@@ -94,7 +94,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="max-w-screen-xl section bg-white" aria-labelledby="footer-heading">
+    <footer className="max-w-screen-xl section global-style" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
