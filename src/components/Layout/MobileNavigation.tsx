@@ -9,8 +9,8 @@ type MobileNavLinkProps = {
 };
 function MobileNavLink({ href, children }: MobileNavLinkProps) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
-      {children}
+    <Popover.Button as={Link} href={href} className="block w-full">
+      <span className="block p-2 cursor-pointer hover:bg-gray-50"> {children}</span>
     </Popover.Button>
   );
 }
@@ -30,7 +30,7 @@ export default function MobileNavigation() {
   return (
     <Popover>
       <Popover.Button
-        className="md:hidden relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+        className="lg:hidden relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}

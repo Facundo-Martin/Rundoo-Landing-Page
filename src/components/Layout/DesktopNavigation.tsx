@@ -3,7 +3,7 @@ import NavLink from '../UI/NavLink';
 
 function DesktopNavigation() {
   return (
-    <div className="hidden md:flex space-x-6 lg:space-x-8  font-medium">
+    <div className="hidden lg:flex space-x-6 lg:space-x-8  font-medium">
       <NavLink href="#features">Features</NavLink>
       <NavLink href="#team">Team</NavLink>
       <NavLink href="#FAQs">FAQs</NavLink>
