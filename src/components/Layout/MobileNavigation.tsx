@@ -9,8 +9,10 @@ type MobileNavLinkProps = {
 };
 function MobileNavLink({ href, children }: MobileNavLinkProps) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full">
-      <span className="block p-2 cursor-pointer hover:bg-gray-50"> {children}</span>
+    <Popover.Button className="block w-full">
+      <a href={href} className="block p-2 cursor-pointer hover:bg-gray-50">
+        {children}
+      </a>
     </Popover.Button>
   );
 }
@@ -58,7 +60,7 @@ export default function MobileNavigation() {
         >
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+            className="absolute inset-x-32 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
