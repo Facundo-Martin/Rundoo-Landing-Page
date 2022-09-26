@@ -4,7 +4,7 @@ import { team } from '../../utils/utils';
 
 function RenderTeam() {
   return (
-    <section className="w-full py-12 bg-white lg:py-24 tails-selected-element">
+    <section id="team" className="w-full py-12 bg-white lg:py-24 tails-selected-element">
       <div className="max-w-6xl px-12 mx-auto text-center">
         <div className="space-y-12 md:text-center">
           <div className="max-w-3xl mb-20 space-y-5 sm:mx-auto sm:space-y-4">
