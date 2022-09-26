@@ -39,7 +39,7 @@ function FeaturesDesktop({ features }: FeatureProps) {
                     'px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none',
                     featureIndex !== selectedIndex && 'opacity-60'
                   )}
-                  style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
+                  // style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
                   aria-hidden={featureIndex !== selectedIndex}
                 >
                   <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
