@@ -1,6 +1,8 @@
 import React, { JSXElementConstructor, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import RundooLogo from '../images/RundooLogo.png';
 
 type ComingSoonModalProps = {
   button: JSX.Element;
@@ -22,12 +24,17 @@ function ComingSoonModal({ button }: ComingSoonModalProps) {
         {/* Full-screen container to center the panel */}
         <div className="fixed inset-0 flex items-center justify-center p-4">
           {/* The actual dialog panel  */}
-          <Dialog.Panel className="mx-auto w-full max-w-xl h-60 rounded bg-stone-100 relative">
-            <Dialog.Title className="text-center my-3 text-3xl font-medium">Coming Soon!</Dialog.Title>
-            <div>etc </div>
+          <Dialog.Panel className="mx-auto w-full max-w-xl h-60 rounded bg-stone-100 relative px-4 py-4">
             <button className="absolute right-[6px] top-[6px] text-sm ">
               <XMarkIcon className="w-5" onClick={() => setIsOpen(false)} />
             </button>
+            <Dialog.Title className="text-center mb-4 text-3xl font-medium">Coming Soon!</Dialog.Title>
+            <div className="grid h-28 place-items-center">
+              <div className="flex items-center justify-center gap-2">
+                <Image src={RundooLogo} width={50} height={50} />
+                <div className="max-w-xs">Our team is currently working on this feature.</div>
+              </div>
+            </div>
 
             {/* ... */}
           </Dialog.Panel>
