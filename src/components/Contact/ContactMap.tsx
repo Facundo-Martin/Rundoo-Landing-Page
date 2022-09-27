@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { MapPinIcon } from '@heroicons/react/24/outline';
 
 const containerStyle = {
   width: '100%',
@@ -19,13 +20,21 @@ export default function ContactMap() {
     return <div>ContactMap</div>;
   }
   return (
-    <div className="w-[550px] h-[400px] shadow-md rounded-md overflow-hidden">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
-        {/* Child components, such as markers, info windows, etc. */}
-        <>
-          <Marker position={center} />
-        </>
-      </GoogleMap>
+    <div className="w-full max-w-xl">
+      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="no-referrer">
+        <div className="w-full h-[400px] shadow-md rounded-md overflow-hidden">
+          <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+            {/* Child components, such as markers, info windows, etc. */}
+            <>
+              <Marker position={center} />
+            </>
+          </GoogleMap>
+        </div>
+      </a>
+      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="no-referrer" className="flex items-center gap-1 mt-2">
+        <MapPinIcon className="w-6 h-6 " />
+        <p>370 Convention Way Suite 102, Redwood City, CA</p>
+      </a>
     </div>
   );
 }
