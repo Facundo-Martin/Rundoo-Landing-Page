@@ -1,4 +1,5 @@
 import React from 'react';
+import ComingSoonModal from '../ComingSoonModal';
 
 function RenderCTA() {
   return (
@@ -28,14 +29,18 @@ function RenderCTA() {
           <p className="max-w-sm my-6 text-base font-normal text-white xl:max-w-lg lg:pr-0 pr-7 lg:text-xl" data-primary="green-400">
             Are you ready to build the page of your dreams? You can use our expertly-crafted designs to you tell your story.
           </p>
-          <a
-            href="#"
-            className="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-blue-500 whitespace-no-wrap bg-white border-2 border-transparent rounded-full shadow-sm md:w-auto md:inline-flex hover:shadow-sm hover:bg-white/90"
-            data-primary="green-400"
-            data-rounded="rounded-full"
-          >
-            Get Started
-          </a>
+
+          <ComingSoonModal
+            button={
+              <div
+                className="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-blue-500 whitespace-no-wrap bg-white border-2 border-transparent rounded-full shadow-sm md:w-auto md:inline-flex hover:shadow-sm hover:bg-white/90"
+                data-primary="green-400"
+                data-rounded="rounded-full"
+              >
+                Get Started
+              </div>
+            }
+          />
         </div>
         <div className="flex items-center h-full col-span-1 md:col-span-2">
           <img
