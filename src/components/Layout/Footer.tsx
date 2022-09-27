@@ -3,6 +3,7 @@ import { SVGProps } from 'react';
 import Logo from '../UI/Logo';
 import AppStoreLogo from '../../images/AppStoreLogo.png';
 import AppStoreDownload from '../../images/AppStoreDownload.svg';
+import clsx from 'clsx';
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
@@ -16,19 +17,14 @@ const navigation = {
     { name: 'Pricing', href: '#' },
     { name: 'Documentation', href: '#' },
     { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'About', href: 'https://www.linkedin.com/company/rundoo/' },
+    { name: 'Careers', href: 'https://jobs.ashbyhq.com/rundoo' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: 'Privacy', href: 'https://www.getrundoo.com/privacy-policy' },
+    { name: 'Terms', href: 'https://www.getrundoo.com/privacy-policy' },
   ],
   social: [
     {
@@ -92,7 +88,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Logo />
-            <p className="text-base text-gray-500">Making the world a better place through constructing elegant hierarchies.</p>
+            <p className="text-base text-gray-500">Buy Materials Better</p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a key={item.name} href={item.href} target="_blank" rel="no-referrer" className="text-gray-400 hover:text-gray-500">
@@ -109,9 +105,7 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                      <p className="text-base text-gray-500 hover:text-gray-900">{item.name}</p>
                     </li>
                   ))}
                 </ul>
@@ -121,9 +115,7 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                      <p className="text-base text-gray-500 hover:text-gray-900">{item.name}</p>
                     </li>
                   ))}
                 </ul>
@@ -162,12 +154,12 @@ export default function Footer() {
             <Image src={AppStoreDownload} width={180} height={80} />
           </a>
         </div>
-        <div className="mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-6 mt-4">
+        <div className="mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-6 mt-4">
           <div className="flex justify-center space-x-6 md:order-2"></div>
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-base text-gray-400">
               &copy; {new Date().getFullYear()}{' '}
-              <a href="https://facundomartin.io" target="_blank" rel="no-referrer" className="font-medium underline">
+              <a href="https://facundomartin.io" target="_blank" rel="referrer" className="font-medium underline">
                 Facundo Martin
               </a>{' '}
               for Rundoo
