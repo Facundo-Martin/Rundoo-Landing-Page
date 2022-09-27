@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { SVGProps } from 'react';
 import Logo from '../UI/Logo';
 import AppStoreDownload from '../../images/AppStoreDownload.svg';
+import GooglePlayDownload from '../../images/GooglePlayDownload.png';
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
@@ -167,9 +168,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex justify-end pr-10 mt-6">
-          <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="no-referrer">
-            <Image src={AppStoreDownload} width={180} height={80} />
-          </a>
+          <div className="flex items-center gap-1">
+            <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="no-referrer">
+              <Image src={GooglePlayDownload} width={150} height={48} />
+            </a>
+            <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="no-referrer">
+              <Image src={AppStoreDownload} width={185} height={80} />
+            </a>
+          </div>
         </div>
         <div className="mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-6 mt-4">
           <div className="flex justify-center space-x-6 md:order-2"></div>
