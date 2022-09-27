@@ -25,10 +25,19 @@ type TeamCardProps = {
 function TeamCard({ member }: TeamCardProps) {
   const avatarURL = member.avatar ? member.avatar : null;
   return (
-    <div className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm">
+    <a
+      href={member.socials.linkedin ? member.socials.linkedin : '#'}
+      target="_blank"
+      rel="no-referrer"
+      className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-2 transform duration-700"
+    >
       <div className="flex flex-col items-center justify-center p-10">
-        <div className="w-24 h-24 rounded-full mb-4">
-          {avatarURL ? <Image src={avatarURL} width={150} height={150} layout="responsive" className="rounded-full" /> : <div>No image</div>}
+        <div className="w-24 h-24 rounded-full mb-4 overflow-hidden">
+          {avatarURL ? (
+            <Image src={avatarURL} width={150} height={150} layout="responsive" className="rounded-full  hover:scale-110 duration-700" />
+          ) : (
+            <div className="w-24 h-24 rounded-full mb-4 overflow-hidden bg-gray-300"></div>
+          )}
         </div>
         <h2 className="text-lg font-medium">{member.name}</h2>
         <p className="font-medium text-blue-500">{member.role}</p>
@@ -46,7 +55,7 @@ function TeamCard({ member }: TeamCardProps) {
           <LinkedInIcon />
         </SocialLink>
       </div>
-    </div>
+    </a>
   );
 }
 
