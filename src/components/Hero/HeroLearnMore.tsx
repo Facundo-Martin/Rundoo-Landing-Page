@@ -62,7 +62,7 @@ export default function Example({ setShowMore }: { setShowMore: (showMore: boole
       <div className="mt-10">
         <dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
           {features.map((feature) => (
-            <div key={feature.name} className="relative group">
+            <div key={feature.name} className="relative group cursor-default">
               <dt>
                 <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
                   <feature.icon className="h-6 w-6 group-hover:hidden" aria-hidden="true" />
@@ -78,6 +78,3 @@ export default function Example({ setShowMore }: { setShowMore: (showMore: boole
     </div>
   );
 }
-
-//    <div className="overflow-hidden section bg-gray-50">
-// <div className="">

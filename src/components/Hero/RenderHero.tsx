@@ -7,7 +7,7 @@ import HeroSponsors from './HeroSponsors';
 function RenderHero() {
   const [showMore, setShowMore] = useState(false);
   const slideHero = 'absolute top-0 left-0 right-0 flex items-center justify-center transition-all ease-in-out duration-1000 transform';
-  const divHeight = showMore ? 'h-[90vh] lg:h-[80vh]' : 'h-[110vh] lg:h-[80vh]';
+  const divHeight = showMore ? 'h-[100vh] lg:h-[60vh]' : 'h-[105vh] lg:h-[60vh]';
   return (
     <section className="section">
       <div className={clsx(divHeight, 'overflow-hidden relative w-full')}>
