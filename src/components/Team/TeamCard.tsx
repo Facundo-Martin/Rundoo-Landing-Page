@@ -65,6 +65,30 @@ function TeamCard({ member }: TeamCardProps) {
       </a>
     );
   }
+  return (
+    <div className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-2 transform duration-700">
+      <div className="flex flex-col items-center justify-center p-10">
+        <div className="w-24 h-24 rounded-full mb-4 overflow-hidden">
+          <div className="w-24 h-24 rounded-full mb-4 overflow-hidden bg-gray-300"></div>
+        </div>
+        <span className="bg-gray-400 w-20"></span>
+        <span className="bg-gray-400 w-20"></span>
+        <span className="bg-gray-400 w-20"></span>
+      </div>
+
+      <div className="flex border-t border-gray-200 divide-x divide-gray-200">
+        <SocialLink href={member.socials.twitter ? member.socials.twitter : ''}>
+          <TwitterIcon />
+        </SocialLink>
+        <SocialLink href={member.socials.github ? member.socials.github : ''}>
+          <GithubIcon />
+        </SocialLink>
+        <SocialLink href={member.socials.linkedin ? member.socials.linkedin : ''}>
+          <LinkedInIcon />
+        </SocialLink>
+      </div>
+    </div>
+  );
 }
 
 export default TeamCard;
