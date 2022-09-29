@@ -53,7 +53,7 @@ export default function Example({ setShowMore }: { setShowMore: (showMore: boole
         </div>
       </button>
       <div className="lg:text-center">
-        <h2 className="text-lg font-semibold text-indigo-600">Rundoo Marketplace</h2>
+        <h2 className="text-lg font-semibold text-blue-600">Rundoo Marketplace</h2>
         <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">A better way to buy materials</p>
         <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
           Rundoo is designed for both contractors and suppliers, with the purpose of making construction more affordable and safer.
@@ -64,7 +64,7 @@ export default function Example({ setShowMore }: { setShowMore: (showMore: boole
           {features.map((feature) => (
             <div key={feature.name} className="relative group cursor-default">
               <dt>
-                <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
+                <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-blue-600/95 text-white">
                   <feature.icon className="h-6 w-6 group-hover:hidden" aria-hidden="true" />
                   <feature.hoverIcon className="h-6 w-6 hidden group-hover:block" aria-hidden="true" />
                 </div>

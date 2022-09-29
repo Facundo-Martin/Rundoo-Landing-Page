@@ -31,6 +31,7 @@ function TeamCard({ member }: TeamCardProps) {
   }, []);
 
   if (isMounted) {
+    const memberprefix = member.role.includes('Co-Founder') ? 'Founding' : 'Team';
     return (
       <a
         href={member.socials.linkedin ? member.socials.linkedin : '#'}
@@ -48,7 +49,9 @@ function TeamCard({ member }: TeamCardProps) {
           </div>
           <h2 className="text-lg font-medium">{member.name}</h2>
           <p className="font-medium text-blue-500">{member.role}</p>
-          <p className="text-gray-400">Team member as of {member.since}</p>
+          <p className="text-gray-400">
+            {memberprefix} member as of {member.since}
+          </p>
         </div>
 
         <div className="flex border-t border-gray-200 divide-x divide-gray-200">
