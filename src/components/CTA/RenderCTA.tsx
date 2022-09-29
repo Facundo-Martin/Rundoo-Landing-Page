@@ -1,5 +1,8 @@
 import React from 'react';
 import ComingSoonModal from '../ComingSoonModal';
+import AppStoreDownload from '../../images/AppStoreDownload.svg';
+import GooglePlayDownload from '../../images/GooglePlayDownload.png';
+import Image from 'next/image';
 
 function RenderCTA() {
   return (
@@ -23,24 +26,18 @@ function RenderCTA() {
         </div>
 
         <div className="relative z-30 col-span-1 md:col-span-3">
-          <h2 className="mb-1 text-3xl font-bold leading-tight text-white md:mb-3 md:text-3xl lg:text-4xl xl:text-5xl">
-            Ready to get started? <span className="block lg:mt-3">Try it free for 14 Days</span>
-          </h2>
+          <h2 className="mb-1 text-3xl font-bold leading-tight text-white md:mb-3 md:text-3xl lg:text-4xl xl:text-5xl">Ready to get started?</h2>
           <p className="max-w-sm my-6 text-base font-normal text-white xl:max-w-lg lg:pr-0 pr-7 lg:text-xl" data-primary="green-400">
-            Are you ready to build the page of your dreams? You can use our expertly-crafted designs to you tell your story.
+            Rundoo was designed to make your ordering process as easy as possible. Join now!
           </p>
-
-          <ComingSoonModal
-            button={
-              <div
-                className="flex items-center justify-center w-full px-4 py-2 text-base font-medium leading-6 text-blue-500 whitespace-no-wrap bg-white border-2 border-transparent rounded-full shadow-sm md:w-auto md:inline-flex hover:shadow-sm hover:bg-white/90"
-                data-primary="green-400"
-                data-rounded="rounded-full"
-              >
-                Get Started
-              </div>
-            }
-          />
+          <div className="flex items-center gap-1">
+            <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="noreferrer">
+              <Image src={GooglePlayDownload} width={150} height={48} />
+            </a>
+            <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="noreferrer">
+              <Image src={AppStoreDownload} width={185} height={80} />
+            </a>
+          </div>
         </div>
         <div className="flex items-center h-full col-span-1 md:col-span-2">
           <img
