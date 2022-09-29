@@ -31,7 +31,7 @@ const features: Feature[] = [
   {
     name: 'Schedule pickup & delivery',
     description:
-      'Flexibility is one of the most important aspects of building. You can order immediately or schedule for later. You can choose to pick up your materials, or get them delivered.',
+      'Flexibility is one of the most important aspects of building. You can order immediately or schedule for later. You can get them delivered or pick them up yourself.',
     icon: TruckIcon,
     hoverIcon: SolidTruckIcon,
   },
@@ -45,11 +45,11 @@ const features: Feature[] = [
 
 export default function Example({ setShowMore }: { setShowMore: (showMore: boolean) => void }) {
   return (
-    <div className="section bg-slate-50/70 py-12">
+    <div className="section  py-12">
       <button onClick={() => setShowMore(false)} className="mb-4">
         <div className="flex items-center gap-2 group">
           <ArrowSmallLeftIcon className="w-7 group-hover:-translate-x-[6px] transition-all ease-in-out duration-700 transform" />
-          <p className="text-lg ">Go Back</p>
+          <p className="text-lg">Go Back</p>
         </div>
       </button>
       <div className="lg:text-center">
