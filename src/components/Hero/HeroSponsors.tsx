@@ -10,7 +10,7 @@ function HeroSponsors() {
   const imageContainer = 'w-32';
   return (
     <div className="section">
-      <h4 className="text-center text-2xl text-gray-500/90 font-medium mb-4 ">We work with</h4>
+      <h4 className="text-center text-2xl text-gray-500/90 font-medium mb-6">We work with</h4>
       <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
           <div className={imageContainer}>

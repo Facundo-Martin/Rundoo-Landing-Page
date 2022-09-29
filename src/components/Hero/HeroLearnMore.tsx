@@ -1,70 +1,79 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { ArrowSmallLeftIcon, BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
+import { ArrowSmallLeftIcon, ShoppingCartIcon, Square3Stack3DIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import {
+  ShoppingCartIcon as SolidShoppingCartIcon,
+  Square3Stack3DIcon as SolidSquare3Stack3DIcon,
+  TruckIcon as SolidTruckIcon,
+  UserGroupIcon as SolidUserGroupIcon,
+} from '@heroicons/react/24/solid';
+import { SVGProps } from 'react';
 
-const transferFeatures = [
+type Feature = {
+  name: string;
+  description: string;
+  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  hoverIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+};
+const features: Feature[] = [
   {
-    id: 1,
-    name: 'Competitive exchange rates',
+    name: 'Wide range of materials',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+      'We work with a large amount of suppliers to make sure our marketplace has everything you need for your job site. If you need it, Rundoo has it! ',
+    icon: Square3Stack3DIcon,
+    hoverIcon: SolidSquare3Stack3DIcon,
   },
   {
-    id: 2,
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+    name: 'Fast checkout process',
+    description: 'Buying supplies has never been easier. Within a couple of clicks you can select your supplier, materials, amount and checkout!',
+    icon: ShoppingCartIcon,
+    hoverIcon: SolidShoppingCartIcon,
   },
   {
-    id: 3,
-    name: 'Transfers are instant',
+    name: 'Schedule pickup & delivery',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: BoltIcon,
+      'Flexibility is one of the most important aspects of building. You can order immediately or schedule for later. You can get them delivered or pick them up yourself.',
+    icon: TruckIcon,
+    hoverIcon: SolidTruckIcon,
+  },
+  {
+    name: 'Order tracking & status',
+    description: 'Stay up to date with your order. Rundoo allows your whole team to track the order and be notified of any changes to the order status.',
+    icon: UserGroupIcon,
+    hoverIcon: SolidUserGroupIcon,
   },
 ];
 
-type HeroLearnMoreProps = {
-  setShowMore: (show: false) => void;
-};
-export default function HeroLearnMore({ setShowMore }: HeroLearnMoreProps) {
+export default function Example({ setShowMore }: { setShowMore: (showMore: boolean) => void }) {
   return (
-    <div className="overflow-hidden section bg-gray-50">
-      <div className="">
-        <button onClick={() => setShowMore(false)} className="">
-          <div className="flex items-center gap-2 group">
-            <ArrowSmallLeftIcon className="w-7 group-hover:-translate-x-[6px] transition-all ease-in-out duration-700 transform" />
-            <p className="text-lg ">Go Back</p>
-          </div>
-        </button>
-        <div className="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
-          <div className="relative">
-            <h3 className="hidden lg:block text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Transfer funds world-wide</h3>
-            <p className="hidden lg:block mt-3 text-lg text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur minima sequi recusandae, porro maiores officia assumenda aliquam laborum ab
-              aliquid veritatis impedit odit adipisci optio iste blanditiis facere. Totam, velit.
-            </p>
-
-            <dl className="mt-10 space-y-10">
-              {transferFeatures.map((item) => (
-                <div key={item.id} className="relative">
-                  <dt>
-                    <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
-                    </div>
-                    <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{item.name}</p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-500">{item.description}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="relative -mx-4 mt-10 lg:mt-0" aria-hidden="true">
-            <img className="relative mx-auto" width={490} src="https://tailwindui.com/img/features/feature-example-1.png" alt="" />
-          </div>
+    <div className="section  py-12">
+      <button onClick={() => setShowMore(false)} className="mb-4">
+        <div className="flex items-center gap-2 group">
+          <ArrowSmallLeftIcon className="w-7 group-hover:-translate-x-[6px] transition-all ease-in-out duration-700 transform" />
+          <p className="text-lg">Go Back</p>
         </div>
+      </button>
+      <div className="lg:text-center">
+        <h2 className="text-lg font-semibold text-indigo-600">Rundoo Marketplace</h2>
+        <p className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">A better way to buy materials</p>
+        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Rundoo is designed for both contractors and suppliers, with the purpose of making construction more affordable and safer.
+        </p>
+      </div>
+      <div className="mt-10">
+        <dl className="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
+          {features.map((feature) => (
+            <div key={feature.name} className="relative group cursor-default">
+              <dt>
+                <div className="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white">
+                  <feature.icon className="h-6 w-6 group-hover:hidden" aria-hidden="true" />
+                  <feature.hoverIcon className="h-6 w-6 hidden group-hover:block" aria-hidden="true" />
+                </div>
+                <p className="ml-16 text-lg font-medium leading-6 text-gray-900">{feature.name}</p>
+              </dt>
+              <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );
