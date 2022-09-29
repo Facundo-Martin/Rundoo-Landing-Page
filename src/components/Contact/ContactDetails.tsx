@@ -10,7 +10,8 @@ export default function ContactDetails() {
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Technical Support</h2>
             <div className="mt-3">
               <p className="text-lg text-gray-500">
-                Hi there. I did not know what to write here so you\'re just gonna have to deal with this instead of a lorem ipsum. Anyways, have a great day!
+                Hi there. I did not know what to write here so you&apos;re just gonna have to deal with this instead of a lorem ipsum. Anyways, have a great
+                day!
               </p>
             </div>
             <div className="mt-9 flex flex-col lg:flex-row lg:items-center gap-8">
@@ -37,7 +38,8 @@ export default function ContactDetails() {
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Sales Support</h2>
             <div className="mt-3">
               <p className="text-lg text-gray-500">
-                Hi there. I did not know what to write here so you\'re just gonna have to deal with this instead of a lorem ipsum. Anyways, have a great day!
+                Hi there. I did not know what to write here so you&apos;re just gonna have to deal with this instead of a lorem ipsum. Anyways, have a great
+                day!
               </p>
             </div>
             <div className="mt-9 flex flex-col lg:flex-row lg:items-center gap-8">
