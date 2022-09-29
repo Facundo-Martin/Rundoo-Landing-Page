@@ -21,7 +21,6 @@ export default function Header() {
               </div>
             }
           />
-
           <MobileNavigation />
         </div>
       </nav>
