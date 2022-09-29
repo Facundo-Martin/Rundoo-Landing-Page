@@ -3,27 +3,25 @@ import { ArrowSmallLeftIcon, BoltIcon, ChatBubbleBottomCenterTextIcon, GlobeAltI
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'Wide range of materials',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We work with a large amount of suppliers to make sure our marketplace has everything you need for your job site. If you need it, Rundoo has it! ',
     icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    name: 'Fast checkout process',
+    description: 'Buying supplies has never been easier. Within a couple of clicks you can select your supplier, materials, amount and checkout!',
     icon: ScaleIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: 'Schedule pickup & delivery',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Flexibility is one of the most important aspects of building. You can order immediately or schedule for later. You can choose to pick up your materials, or get them delivered.',
     icon: BoltIcon,
   },
   {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    name: 'Order tracking & status',
+    description: 'Stay up to date with your order. Rundoo allows your whole team to track the order and be notified of any changes to the order status.',
     icon: ChatBubbleBottomCenterTextIcon,
   },
 ];
