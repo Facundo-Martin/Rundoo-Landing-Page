@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
+import ComingSoonModal from '../ComingSoonModal';
 
 type MobileNavLinkProps = {
   href: string;
@@ -9,8 +10,10 @@ type MobileNavLinkProps = {
 };
 function MobileNavLink({ href, children }: MobileNavLinkProps) {
   return (
-    <Popover.Button as={Link} href={href} className="block w-full p-2">
-      {children}
+    <Popover.Button className="block w-full">
+      <a href={href} className="block p-2 cursor-pointer hover:bg-gray-50">
+        {children}
+      </a>
     </Popover.Button>
   );
 }
@@ -30,7 +33,7 @@ export default function MobileNavigation() {
   return (
     <Popover>
       <Popover.Button
-        className="md:hidden relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
+        className="lg:hidden relative z-10 flex h-8 w-8 items-center justify-center [&:not(:focus-visible)]:focus:outline-none"
         aria-label="Toggle Navigation"
       >
         {({ open }) => <MobileNavIcon open={open} />}
@@ -58,13 +61,13 @@ export default function MobileNavigation() {
         >
           <Popover.Panel
             as="div"
-            className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
+            className="absolute inset-x-20 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5"
           >
             <MobileNavLink href="#features">Features</MobileNavLink>
             <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
             <MobileNavLink href="#pricing">Pricing</MobileNavLink>
             <hr className="m-2 border-slate-300/40" />
-            <MobileNavLink href="/login">Sign in</MobileNavLink>
+            <ComingSoonModal button={<div>Sign in</div>} />
           </Popover.Panel>
         </Transition.Child>
       </Transition.Root>

@@ -1,6 +1,4 @@
 import { DetailedHTMLProps, HTMLAttributes, JSXElementConstructor, useId } from 'react';
-import Image from 'next/future/image';
-import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
 import screenshotContacts from '../../images/contacts.webp';
 import screenshotInventory from '../../images/inventory.webp';

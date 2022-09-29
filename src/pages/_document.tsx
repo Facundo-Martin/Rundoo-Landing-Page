@@ -4,7 +4,7 @@ function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head />
-      <body className="flex h-full flex-col">
+      <body className="flex h-full flex-col global-style">
         <Main />
         <NextScript />
       </body>

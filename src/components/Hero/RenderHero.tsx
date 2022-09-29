@@ -10,7 +10,7 @@ function RenderHero() {
   const divHeight = showMore ? 'h-[120vh] lg:h-[80vh]' : 'h-[100vh] lg:h-[80vh]';
   return (
     <section className="section">
-      <div className={clsx(divHeight, 'overflow-hidden relative w-full border-2')}>
+      <div className={clsx(divHeight, 'overflow-hidden relative w-full')}>
         <div className={clsx(slideHero, showMore ? 'translate-x-0' : '-translate-x-full')}>
           <HeroLearnMore setShowMore={setShowMore} />
         </div>
@@ -18,7 +18,6 @@ function RenderHero() {
           <HeroMain setShowMore={setShowMore} />
         </div>
       </div>
-
       <HeroSponsors />
     </section>
   );

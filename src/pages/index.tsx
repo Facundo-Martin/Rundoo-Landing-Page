@@ -1,8 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
-import { useRef } from 'react';
-import RenderAdditionalInfo from '../components/AdditionalInfo/RenderAdditionalInfo';
 import RenderContact from '../components/Contact/RenderContact';
 import RenderCTA from '../components/CTA/RenderCTA';
 import RenderFAQs from '../components/FAQs/RenderFAQs';
@@ -26,7 +23,6 @@ const Home: NextPage = () => {
           <RenderCTA />
           <RenderFAQs />
           <RenderContact />
-          <RenderAdditionalInfo />
         </>
       </Layout>
     </>

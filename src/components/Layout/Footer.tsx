@@ -1,5 +1,8 @@
+import Image from 'next/image';
 import { SVGProps } from 'react';
 import Logo from '../UI/Logo';
+import AppStoreDownload from '../../images/AppStoreDownload.svg';
+import GooglePlayDownload from '../../images/GooglePlayDownload.png';
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
@@ -13,34 +16,16 @@ const navigation = {
     { name: 'Pricing', href: '#' },
     { name: 'Documentation', href: '#' },
     { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'About', href: 'https://www.linkedin.com/company/rundoo/' },
+    { name: 'Careers', href: 'https://jobs.ashbyhq.com/rundoo' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: 'Privacy', href: 'https://www.getrundoo.com/privacy-policy' },
+    { name: 'Terms', href: 'https://www.getrundoo.com/privacy-policy' },
   ],
   social: [
-    {
-      name: 'Facebook',
-      href: '#',
-      icon: (props: SVGProps<SVGSVGElement>) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
-    },
     {
       name: 'Instagram',
       href: '#',
@@ -77,15 +62,34 @@ const navigation = {
       ),
     },
     {
-      name: 'Dribbble',
-      href: '#',
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/rundoo/',
       icon: (props: SVGProps<SVGSVGElement>) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
-            clipRule="evenodd"
-          />
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="21" height="21" viewBox="0 0 192 192" className="mt-[1.5px]">
+          {
+            <g
+              fill="none"
+              fill-rule="nonzero"
+              stroke="none"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeMiterlimit="10"
+              strokeDasharray=""
+              strokeDashoffset="0"
+              fontFamily="none"
+              fontWeight="none"
+              fontSize="none"
+              textAnchor="none"
+            >
+              <path d="M0,192v-192h192v192z" fill="none"></path>
+              <g fill="currentColor">
+                <g id="surface1">
+                  <path d="M156,0h-120c-19.875,0 -36,16.125 -36,36v120c0,19.875 16.125,36 36,36h120c19.875,0 36,-16.125 36,-36v-120c0,-19.875 -16.125,-36 -36,-36zM59.36539,162.98077h-29.82693l-0.17307,-89.30769h29.82692zM43.70192,61.99038h-0.17308c-9.75,0 -16.03846,-6.72115 -16.03846,-15.08653c0,-8.56731 6.49039,-15.0577 16.41347,-15.0577c9.92308,0 16.00961,6.49038 16.21153,15.0577c0,8.36538 -6.31731,15.08653 -16.41346,15.08653zM162.77885,162.98077h-30.08654v-48.51923c0,-11.74039 -3.11538,-19.73077 -13.61538,-19.73077c-8.01923,0 -12.34615,5.39423 -14.42308,10.61538c-0.77885,1.875 -0.98077,4.44231 -0.98077,7.06731v50.56731h-30.23077l-0.17308,-89.30769h30.23077l0.17308,12.60577c3.86538,-5.97116 10.29808,-14.42308 25.70192,-14.42308c19.09616,0 33.37501,12.46154 33.37501,39.25961v51.86539z"></path>
+                </g>
+              </g>
+            </g>
+          }
         </svg>
       ),
     },
@@ -94,7 +98,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="max-w-screen-xl section bg-white" aria-labelledby="footer-heading">
+    <footer className="max-w-screen-xl section global-style" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -102,10 +106,10 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Logo />
-            <p className="text-base text-gray-500">Making the world a better place through constructing elegant hierarchies.</p>
+            <p className="text-base text-gray-500">Buy Materials Better</p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
+                <a key={item.name} href={item.href} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
@@ -119,9 +123,7 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                      <p className="text-base text-gray-500 hover:text-gray-900">{item.name}</p>
                     </li>
                   ))}
                 </ul>
@@ -131,9 +133,7 @@ export default function Footer() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
-                        {item.name}
-                      </a>
+                      <p className="text-base text-gray-500 hover:text-gray-900">{item.name}</p>
                     </li>
                   ))}
                 </ul>
@@ -167,17 +167,26 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-8 mt-12">
-          <div className="flex justify-center space-x-6 md:order-2">
-            {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
-              </a>
-            ))}
+        <div className="flex justify-end pr-10 mt-6">
+          <div className="flex items-center gap-1">
+            <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="noreferrer">
+              <Image src={GooglePlayDownload} width={150} height={48} />
+            </a>
+            <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="noreferrer">
+              <Image src={AppStoreDownload} width={185} height={80} />
+            </a>
           </div>
+        </div>
+        <div className="mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-6 mt-4">
+          <div className="flex justify-center space-x-6 md:order-2"></div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-base text-gray-400">&copy; {new Date().getFullYear()} Facundo Martin for Rundoo</p>
+            <p className="text-center text-base text-gray-400">
+              &copy; {new Date().getFullYear()}{' '}
+              <a href="https://facundomartin.io" target="_blank" rel="noreferrer" className="font-medium underline">
+                Facundo Martin
+              </a>{' '}
+              for Rundoo
+            </p>
           </div>
         </div>
       </div>
