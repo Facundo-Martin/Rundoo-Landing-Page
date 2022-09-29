@@ -32,9 +32,6 @@ function TeamCard({ member }: TeamCardProps) {
 
   if (isMounted) {
     const memberprefix = member.role.includes('Co-Founder') ? 'Founding' : 'Team';
-    (function () {
-      console.log(member.role.indexOf('Co-Founder'));
-    })();
     return (
       <a
         href={member.socials.linkedin ? member.socials.linkedin : '#'}
