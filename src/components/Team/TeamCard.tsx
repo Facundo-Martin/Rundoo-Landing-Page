@@ -35,7 +35,7 @@ function TeamCard({ member }: TeamCardProps) {
       <a
         href={member.socials.linkedin ? member.socials.linkedin : '#'}
         target="_blank"
-        rel="no-referrer"
+        rel="noreferrer"
         className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-2 transform duration-700"
       >
         <div className="flex flex-col items-center justify-center p-10">

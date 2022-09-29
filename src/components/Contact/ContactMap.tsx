@@ -21,7 +21,7 @@ export default function ContactMap() {
   }
   return (
     <div className="w-full max-w-xl">
-      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="no-referrer">
+      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="noreferrer">
         <div className="w-full h-[400px] shadow-md rounded-md overflow-hidden">
           <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
             {/* Child components, such as markers, info windows, etc. */}
@@ -31,7 +31,7 @@ export default function ContactMap() {
           </GoogleMap>
         </div>
       </a>
-      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="no-referrer" className="flex items-center gap-1 mt-2">
+      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="noreferrer" className="flex items-center gap-1 mt-2">
         <MapPinIcon className="w-6 h-6 " />
         <p>370 Convention Way Suite 102, Redwood City, CA</p>
       </a>

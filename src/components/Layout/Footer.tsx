@@ -109,7 +109,7 @@ export default function Footer() {
             <p className="text-base text-gray-500">Buy Materials Better</p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} target="_blank" rel="no-referrer" className="text-gray-400 hover:text-gray-500">
+                <a key={item.name} href={item.href} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </a>
@@ -169,10 +169,10 @@ export default function Footer() {
         </div>
         <div className="flex justify-end pr-10 mt-6">
           <div className="flex items-center gap-1">
-            <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="no-referrer">
+            <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="noreferrer">
               <Image src={GooglePlayDownload} width={150} height={48} />
             </a>
-            <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="no-referrer">
+            <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="noreferrer">
               <Image src={AppStoreDownload} width={185} height={80} />
             </a>
           </div>
@@ -182,7 +182,7 @@ export default function Footer() {
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-base text-gray-400">
               &copy; {new Date().getFullYear()}{' '}
-              <a href="https://facundomartin.io" target="_blank" rel="referrer" className="font-medium underline">
+              <a href="https://facundomartin.io" target="_blank" rel="noreferrer" className="font-medium underline">
                 Facundo Martin
               </a>{' '}
               for Rundoo
