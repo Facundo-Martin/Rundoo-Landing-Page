@@ -8,51 +8,38 @@ type FeatureProps = {
 };
 function FeaturesDesktop({ features }: FeatureProps) {
   return (
-    <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
-      {({ selectedIndex }) => (
-        <>
-          <Tab.List className="grid grid-cols-3 gap-x-8">
-            {features.map((feature, featureIndex) => (
-              <Feature
-                key={featureIndex}
-                feature={{
-                  ...feature,
-                  name: (
-                    <Tab className="[&:not(:focus-visible)]:focus:outline-none">
-                      <span className="absolute inset-0" />
-                      {feature.name}
-                    </Tab>
-                  ),
-                }}
-                isActive={featureIndex === selectedIndex}
-                className="relative"
-              />
-            ))}
-          </Tab.List>
-          <Tab.Panels className="relative mt-20 overflow-hidden rounded-4xl bg-slate-200 px-14 py-16 xl:px-16">
-            <div className="-mx-5 flex">
-              {features.map((feature, featureIndex) => (
-                <Tab.Panel
-                  static
-                  key={featureIndex}
-                  className={clsx(
-                    'px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none',
-                    featureIndex !== selectedIndex && 'opacity-60'
-                  )}
-                  // style={{ transform: `translateX(-${selectedIndex * 100}%)` }}
-                  aria-hidden={featureIndex !== selectedIndex}
-                >
-                  <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                    <Image className="w-full" src={feature.image} alt="" sizes="52.75rem" />
+    <div className="flex mt-20 justify-between gap-x-10">
+      <div className="flex flex-col gap-y-6 ">
+        {features.map((feature, featureIndex) => (
+          <div className="max-w-md" key={featureIndex}>
+            <Feature
+              feature={{
+                ...feature,
+                name: (
+                  <div className="[&:not(:focus-visible)]:focus:outline-none">
+                    <span className="absolute inset-0" />
+                    {feature.name}
                   </div>
-                </Tab.Panel>
-              ))}
+                ),
+              }}
+              className="relative"
+            />
+          </div>
+        ))}
+      </div>
+      <div className="relative bg-slate-200">
+        <div
+          className={clsx('px-5 transition duration-500 ease-in-out [&:not(:focus-visible)]:focus:outline-none flex')}
+          // style={{ transform: `translateY(-${selectedIndex * 100}%)` }}
+        >
+          {features.map((feature, featureIndex) => (
+            <div className={clsx('rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10 -mx-12')}>
+              <Image src={feature.image} alt="" height={550} width={280} />
             </div>
-            <div className="pointer-events-none absolute inset-0 rounded-4xl ring-1 ring-inset ring-slate-900/10" />
-          </Tab.Panels>
-        </>
-      )}
-    </Tab.Group>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -1,8 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes, JSXElementConstructor, useId } from 'react';
 import clsx from 'clsx';
-import screenshotContacts from '../../images/contacts.webp';
-import screenshotInventory from '../../images/inventory.webp';
-import screenshotProfitLoss from '../../images/profit-loss.webp';
+import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
+import RundooOrderStatus from '../../images/RundooOrderStatus.png';
 import FeaturesMobile from './FeaturesMobile';
 import FeaturesDesktop from './FeaturesDesktop';
 import { StaticImageData } from 'next/image';
@@ -17,7 +16,7 @@ const features = [
   {
     name: 'Reporting',
     summary: 'Stay on top of things with always up-to-date reporting features.',
-    image: screenshotProfitLoss,
+    image: RundooBrowseSupplies,
     icon: function ReportingIcon() {
       let id = useId();
       return (
@@ -36,7 +35,7 @@ const features = [
   {
     name: 'Inventory',
     summary: 'Never lose track of what’s in stock with accurate inventory tracking.',
-    image: screenshotInventory,
+    image: RundooOrderStatus,
     icon: function InventoryIcon() {
       return (
         <>
@@ -50,7 +49,7 @@ const features = [
   {
     name: 'Contacts',
     summary: 'Organize all of your contacts, service providers, and invoices in one place.',
-    image: screenshotContacts,
+    image: RundooOrderStatus,
     icon: function ContactsIcon() {
       return (
         <>
@@ -71,18 +70,18 @@ const features = [
 
 interface FeatureProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   feature: FeatureType;
-  isActive: boolean;
+  isActive?: boolean;
   className?: string;
 }
 export function Feature({ feature, isActive, className, ...props }: FeatureProps) {
   return (
-    <div className={clsx(className, !isActive && 'opacity-75 hover:opacity-100')} {...props}>
+    <div className={clsx(className, 'p-4 rounded-l-lg', isActive ? 'lg:bg-blue-100/60' : 'opacity-75 hover:opacity-100')} {...props}>
       <div className={clsx('w-9 rounded-lg', isActive ? 'bg-blue-600' : 'bg-slate-500')}>
         <svg aria-hidden="true" className="h-9 w-9" fill="none">
           <feature.icon />
         </svg>
       </div>
-      <h3 className={clsx('mt-6 text-sm font-medium', isActive ? 'text-blue-600' : 'text-slate-600')}>{feature.name}</h3>
+      <h3 className={clsx('mt-2 text-sm font-medium', isActive ? 'text-blue-600' : 'text-slate-600')}>{feature.name}</h3>
       <p className="mt-2 font-display text-xl text-slate-900">{feature.summary}</p>
     </div>
   );
