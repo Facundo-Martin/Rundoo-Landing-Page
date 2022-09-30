@@ -75,14 +75,14 @@ interface FeatureProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
 }
 export function Feature({ feature, isActive, className, ...props }: FeatureProps) {
   return (
-    <div className={clsx(className, 'p-4 rounded-l-lg', isActive ? 'lg:bg-blue-100/60' : 'opacity-75 hover:opacity-100')} {...props}>
+    <div className={clsx(className, 'p-4 rounded-l-lg', isActive ? 'lg:bg-blue-100/60 opacity-100' : 'opacity-75 hover:opacity-100')} {...props}>
       <div className={clsx('w-9 rounded-lg', isActive ? 'bg-blue-600' : 'bg-slate-500')}>
         <svg aria-hidden="true" className="h-9 w-9" fill="none">
           <feature.icon />
         </svg>
       </div>
-      <h3 className={clsx('mt-2 text-sm font-medium', isActive ? 'text-blue-600' : 'text-slate-600')}>{feature.name}</h3>
-      <p className="mt-2 font-display text-xl text-slate-900">{feature.summary}</p>
+      <h3 className={clsx('mt-2 text-sm font-medium', isActive ? 'text-gray-600' : 'text-white')}>{feature.name}</h3>
+      <p className="mt-2 font-display text-xl text-white">{feature.summary}</p>
     </div>
   );
 }
@@ -92,8 +92,8 @@ function RenderFeatures() {
     <section id="features" aria-label="Features for simplifying everyday business tasks" className="bg-gradient-to-r from-blue-400 to-blue-500 lg:h-screen">
       <div className="section wrapper">
         <div className="mx-auto max-w-2xl md:text-center">
-          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">Simplify everyday business tasks.</h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">Simplify everyday business tasks.</h2>
+          <p className="mt-4 text-lg tracking-tight text-white">
             Because you’d probably be a little confused if we suggested you complicate your everyday business tasks instead.
           </p>
         </div>

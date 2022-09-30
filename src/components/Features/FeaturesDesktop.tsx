@@ -15,8 +15,8 @@ function FeaturesDesktop({ features }: FeatureProps) {
   const imageStyle = 'rounded-xl -mx-12';
   console.log('isActive', isActive);
   return (
-    <div className="flex mt-20 justify-between gap-x-10">
-      <div className="flex flex-col gap-y-6 ">
+    <div className="flex mt-20 justify-between  items-center gap-x-10">
+      <div className="flex flex-col ">
         {features.map((feature, featureIndex) => (
           <button className="max-w-md text-left" key={featureIndex} onClick={() => setIsActive(featureIndex)}>
             <Feature
@@ -29,7 +29,9 @@ function FeaturesDesktop({ features }: FeatureProps) {
                   </div>
                 ),
               }}
-              className={clsx(isActive == featureIndex ? 'bg-blue-100/60 transform duration-300' : '')}
+              className={clsx(
+                isActive == featureIndex ? 'bg-neutral-800/10 transform duration-300 opacity-100' : 'hover:opacity-100 hover:bg-neutral-800/5 duration-500'
+              )}
             />
           </button>
         ))}
