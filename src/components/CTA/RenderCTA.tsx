@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function RenderCTA() {
   return (
-    <section className="section">
+    <section className="section wrapper">
       <div
         className="relative grid items-center grid-cols-1 gap-10 p-12 overflow-hidden shadow-2xl md:p-16 lg:p-20 xl:p-24 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl md:grid-cols-5 lg:gap-0"
         data-primary="green-400"

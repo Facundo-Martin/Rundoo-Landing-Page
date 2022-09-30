@@ -29,7 +29,7 @@ function FeaturesDesktop({ features }: FeatureProps) {
                   </div>
                 ),
               }}
-              className={clsx(isActive == featureIndex ? 'bg-blue-100 transform duration-300' : '')}
+              className={clsx(isActive == featureIndex ? 'bg-blue-100/60 transform duration-300' : '')}
             />
           </button>
         ))}
