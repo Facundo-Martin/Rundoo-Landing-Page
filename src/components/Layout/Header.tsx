@@ -5,7 +5,7 @@ import ComingSoonModal from '../ComingSoonModal';
 
 export default function Header() {
   return (
-    <header className="py-10 section global-style">
+    <header className="py-10 section wrapper global-style">
       <nav className="relative z-50 flex justify-between">
         <div className="w-full flex items-center justify-between">
           <Logo />
