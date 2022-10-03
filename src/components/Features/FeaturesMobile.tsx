@@ -6,16 +6,18 @@ type FeaturesMobileProps = {
 };
 function FeaturesMobile({ features }: FeaturesMobileProps) {
   return (
-    <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
+    <div className="-mx-4 mt-20 flex flex-col items-center justify-center gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
       {features.map((feature, featureIndex) => (
         <div key={featureIndex}>
-          <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
-          <div className="relative mt-10 pb-10">
-            <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
-            <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-              <Image className="w-full" src={feature.image} alt="" sizes="52.75rem" />
-            </div>
-          </div>
+          <Feature
+            feature={{
+              ...feature,
+              name: <div className="text-white">{feature.name}</div>,
+            }}
+            className="flex flex-col items-center mx-auto max-w-sm mb-5"
+            isActive
+          />
+          <Image src={feature.image} alt="" height={650} width={420} />
         </div>
       ))}
     </div>
