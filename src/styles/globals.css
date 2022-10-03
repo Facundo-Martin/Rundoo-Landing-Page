@@ -4,7 +4,10 @@
 
 @layer components {
   .global-style {
-    @apply bg-white  text-light-text-primary max-w-screen-xl mx-auto;
+    @apply bg-white  text-light-text-primary;
+  }
+  .wrapper {
+    @apply max-w-screen-xl mx-auto;
   }
   .section {
     @apply mx-auto py-16 px-4 sm:px-8 md:px-12 lg:px-16;

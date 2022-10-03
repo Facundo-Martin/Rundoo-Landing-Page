@@ -1,4 +1,4 @@
-import { Divide } from 'hamburger-react';
+import { ArrowUpIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
 const ScrollTopButton = () => {
@@ -6,7 +6,8 @@ const ScrollTopButton = () => {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300) {
+    console.log('running scroll');
+    if (scrolled > 1400) {
       setVisible(true);
     } else if (scrolled <= 300) {
       setVisible(false);
@@ -23,9 +24,16 @@ const ScrollTopButton = () => {
   window.addEventListener('scroll', toggleVisible);
 
   return (
-    <button onClick={scrollToTop} className="sticky bottom-0 right-0">
-      Button
-    </button>
+    <section className="wrapper w-full flex justify-end">
+      {visible && (
+        <button onClick={scrollToTop}>
+          <div className="flex flex-col items-center group">
+            <ArrowUpIcon className="w-5 group-hover:-translate-y-2 transition-all duration-700" />
+            <p> Back to Top</p>
+          </div>
+        </button>
+      )}
+    </section>
   );
 };
 
