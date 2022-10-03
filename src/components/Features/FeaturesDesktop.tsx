@@ -15,7 +15,7 @@ function FeaturesDesktop({ features }: FeatureProps) {
   const imageStyle = 'rounded-xl -mx-12';
   console.log('isActive', isActive);
   return (
-    <div className="flex mt-20 justify-between  items-center gap-x-14">
+    <div className="hidden mt-20  lg:flex justify-between items-center gap-x-14">
       <div className="flex flex-col ">
         {features.map((feature, featureIndex) => (
           <button className="relative max-w-md text-left" onClick={() => setIsActive(featureIndex)}>

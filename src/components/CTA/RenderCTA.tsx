@@ -1,5 +1,4 @@
 import React from 'react';
-import ComingSoonModal from '../ComingSoonModal';
 import AppStoreDownload from '../../images/AppStoreDownload.svg';
 import GooglePlayDownload from '../../images/GooglePlayDownload.png';
 import Image from 'next/image';
@@ -28,7 +27,7 @@ function RenderCTA() {
         <div className="relative z-30 col-span-1 md:col-span-3">
           <h2 className="mb-1 text-3xl font-bold leading-tight text-white md:mb-3 md:text-3xl lg:text-4xl xl:text-5xl">Ready to get started?</h2>
           <p className="max-w-sm my-6 text-base font-normal text-white xl:max-w-lg lg:pr-0 pr-7 lg:text-xl" data-primary="green-400">
-            Rundoo was designed to make your ordering process as easy as possible. Join now!
+            Rundoo was designed to make your ordering process as easy as possible. Get it now!
           </p>
           <div className="flex items-center gap-1">
             <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="noreferrer">
