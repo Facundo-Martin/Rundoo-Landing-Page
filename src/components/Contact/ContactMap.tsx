@@ -22,20 +22,25 @@ export default function ContactMap() {
   }
   return (
     <div className="w-full max-w-xl">
-      <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="noreferrer">
-        <div className="w-full h-[400px] shadow-md rounded-md overflow-hidden">
-          <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
-            {/* Child components, such as markers, info windows, etc. */}
-            <>
-              <Marker position={center} />
-            </>
-          </GoogleMap>
-        </div>
-      </a>
+      <div className="relative w-full h-[400px] shadow-md rounded-md overflow-hidden">
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+          <Marker position={center} />
+        </GoogleMap>
+        {/* I don't feel like integrating the direction API now haha */}
+        <a
+          href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6"
+          target="_blank"
+          rel="noreferrer"
+          className="absolute z-100 bottom-0 left-2 bg-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-500/90 hover:text-white"
+        >
+          <p className="font-semibold">Get Directions</p>
+        </a>
+      </div>
+
       <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="noreferrer" className="flex items-center gap-1 mt-2 group">
         <MapPinIcon className="w-6 h-6 group-hover:hidden" />
         <SolidMapPinIcon className="w-6 h-6 hidden group-hover:block fill-red-600/90" />
-        <p className="group-hover:font-medium">370 Convention Way Suite 102, Redwood City, CA</p>
+        <p className="group-hover:font-medium ">370 Convention Way Suite 102, Redwood City, CA</p>
       </a>
     </div>
   );
