@@ -1,3 +1,4 @@
+import { Divide } from 'hamburger-react';
 import { useState } from 'react';
 
 const ScrollTopButton = () => {
@@ -21,7 +22,11 @@ const ScrollTopButton = () => {
 
   window.addEventListener('scroll', toggleVisible);
 
-  return <button onClick={scrollToTop}>Button</button>;
+  return (
+    <button onClick={scrollToTop} className="sticky bottom-0 right-0">
+      Button
+    </button>
+  );
 };
 
 export default ScrollTopButton;
