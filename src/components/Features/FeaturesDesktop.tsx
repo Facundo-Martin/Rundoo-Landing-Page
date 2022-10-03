@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Tab } from '@headlessui/react';
 import { Feature, FeatureType } from './RenderFeatures';
 import clsx from 'clsx';
 import { useState } from 'react';
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
-import RundooOrderStatus from '../../images/RundooOrderStatus.png';
+import RundooExplore from '../../images/RundooExplore.png';
+import RundooOrderTracking from '../../images/RundooOrderTracking.png';
 
 type FeatureProps = {
   features: FeatureType[];
@@ -32,15 +32,15 @@ function FeaturesDesktop({ features }: FeatureProps) {
         ))}
       </div>
       <div className="relative">
-        <div className="px-5 flex">
+        <div className="px-5 flex items-center">
           <div className={clsx(isActive == 0 ? bringForward : 'scale-100 duration-700', imageStyle)}>
-            <Image src={RundooBrowseSupplies} alt="" height={520} width={320} />
+            <Image src={RundooBrowseSupplies} alt="" height={500} width={320} />
           </div>
           <div className={clsx(isActive == 1 ? bringForward : 'scale-100 duration-700', imageStyle, 'z-10')}>
-            <Image src={RundooBrowseSupplies} alt="" height={520} width={320} />
+            <Image src={RundooExplore} alt="" height={520} width={320} />
           </div>
           <div className={clsx(isActive == 2 ? bringForward : 'scale-100 duration-700', imageStyle)}>
-            <Image src={RundooBrowseSupplies} alt="" height={520} width={320} />
+            <Image src={RundooOrderTracking} alt="" height={520} width={320} />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { DetailedHTMLProps, HTMLAttributes, JSXElementConstructor, useId } from 'react';
 import clsx from 'clsx';
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
+
 import RundooOrderStatus from '../../images/RundooOrderStatus.png';
 import FeaturesMobile from './FeaturesMobile';
 import FeaturesDesktop from './FeaturesDesktop';
