@@ -40,7 +40,7 @@ export default function ContactMap() {
       <a href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6" target="_blank" rel="noreferrer" className="flex items-center gap-1 mt-2 group">
         <MapPinIcon className="w-6 h-6 group-hover:hidden" />
         <SolidMapPinIcon className="w-6 h-6 hidden group-hover:block fill-red-600/90" />
-        <p className="group-hover:font-medium">370 Convention Way Suite 102, Redwood City, CA</p>
+        <p className="group-hover:font-medium ">370 Convention Way Suite 102, Redwood City, CA</p>
       </a>
     </div>
   );

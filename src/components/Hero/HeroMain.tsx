@@ -36,7 +36,7 @@ function HeroMain({ setShowMore }: HeroMainProps) {
           <div className="w-full flex sm:flex-row flex-col sm:justify-center lg:justify-start font-medium sm:space-x-5 space-y-4 sm:space-y-0">
             <ComingSoonModal
               button={
-                <div className="px-7 py-4 bg-gray-900 text-white border-2 border-gray-900 hover:bg-white hover:text-gray-900 transition-all ease-out duration-150 rounded-xl flex items-center justify-center text-lg">
+                <div className="px-6 py-3 bg-gray-900 text-white border-2 border-gray-900 hover:bg-white hover:text-gray-900 transition-all ease-out duration-150 rounded-xl flex items-center justify-center text-lg">
                   Sign Up Today
                 </div>
               }
@@ -44,7 +44,7 @@ function HeroMain({ setShowMore }: HeroMainProps) {
 
             <button
               onClick={() => setShowMore(true)}
-              className="px-7 flex items-center py-4 bg-gray-100 border-2 border-gray-100 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
+              className="px-6 flex items-center py-3 bg-gray-100 border-2 border-gray-200/60 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
             >
               <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
