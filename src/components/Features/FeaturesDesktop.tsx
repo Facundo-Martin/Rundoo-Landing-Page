@@ -18,7 +18,7 @@ function FeaturesDesktop({ features }: FeatureProps) {
     <div className="hidden mt-20  lg:flex justify-between items-center gap-x-14">
       <div className="flex flex-col ">
         {features.map((feature, featureIndex) => (
-          <button className="relative max-w-md text-left" onClick={() => setIsActive(featureIndex)}>
+          <button key={featureIndex} className="relative max-w-md text-left" onClick={() => setIsActive(featureIndex)}>
             <Feature
               feature={{
                 ...feature,
