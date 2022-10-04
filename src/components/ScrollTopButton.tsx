@@ -7,9 +7,8 @@ const ScrollTopButton = () => {
       behavior: 'smooth',
     });
   };
-
   return (
-    <section className="wrapper w-full flex justify-end px-10 xl:px-2">
+    <section className="wrapper mt-8 lg:my-8 w-full flex justify-end px-10 xl:px-2">
       <button onClick={scrollToTop}>
         <div className="flex flex-col items-center group">
           <ArrowUpIcon className="w-5 group-hover:-translate-y-2 transition-all duration-700" />

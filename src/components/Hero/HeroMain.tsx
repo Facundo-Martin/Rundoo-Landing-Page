@@ -1,8 +1,7 @@
-import React from 'react';
+import Image from 'next/image';
 import ComingSoonModal from '../ComingSoonModal';
 import BrowseSupplies from '../../images/RundooBrowseSupplies.png';
 import OrderStatus from '../../images/RundooOrderStatus.png';
-import Image from 'next/image';
 
 type HeroMainProps = {
   setShowMore: (show: boolean) => void;
@@ -20,7 +19,6 @@ function HeroMain({ setShowMore }: HeroMainProps) {
           <h1 className="font-extrabold text-4xl sm:text-5xl xl:text-6xl sm:text-center lg:text-left relative tracking-tight">
             Start Ordering Your<br></br>Supplies Online
           </h1>
-
           <div className="flex max-w-sm items-center lg:max-w-lg">
             <div className="flex flex-shrink-0">
               <img src="https://cdn.devdojo.com/tails/avatars/010.jpg" className="rounded-full w-12 h-12 border-2 border-white" />
@@ -32,7 +30,6 @@ function HeroMain({ setShowMore }: HeroMainProps) {
               online!
             </p>
           </div>
-
           <div className="w-full flex sm:flex-row flex-col sm:justify-center lg:justify-start font-medium sm:space-x-5 space-y-4 sm:space-y-0">
             <ComingSoonModal
               button={
@@ -41,38 +38,36 @@ function HeroMain({ setShowMore }: HeroMainProps) {
                 </div>
               }
             />
-
             <button
               onClick={() => setShowMore(true)}
               className="px-6 flex items-center py-3 bg-gray-100 border-2 border-gray-200/60 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
             >
               <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               <span>Learn More</span>
             </button>
           </div>
         </div>
-
         <div className="relative flex-1 flex-shrink-0 w-[30rem] mt-24 lg:mt-0 h-[30rem]">
           <div className="lg:hidden">
-            <div className="h-full w-80 absolute -bottom-14 left-6 ">
-              <Image src={OrderStatus} width={140} height={200} alt="" layout="responsive" />
+            <div className="h-full w-60 absolute -bottom-14 left-20 ">
+              <Image src={OrderStatus} width={140} height={200} alt="Rundoo order status" layout="responsive" priority />
             </div>
-            <div className="h-full w-80 absolute right-6 -top-4">
-              <Image src={BrowseSupplies} width={140} height={200} alt="" layout="responsive" />
+            <div className="h-full w-60 absolute right-16 -top-4">
+              <Image src={BrowseSupplies} width={140} height={200} alt="Rundoo browse supplies" layout="responsive" priority />
             </div>
           </div>
           <div className="hidden lg:block drop-shadow-xl ">
             <div className="h-full w-80 absolute -bottom-14 hover:-translate-x-4 transform duration-700">
-              <Image src={BrowseSupplies} width={140} height={200} alt="" layout="responsive" />
+              <Image src={BrowseSupplies} width={140} height={200} alt="Rundoo browse supplies" layout="responsive" priority />
             </div>
             <div className="h-full w-80 absolute right-5 -top-0 hover:-translate-x-4 transform duration-700">
-              <Image src={OrderStatus} width={140} height={200} alt="" layout="responsive" />
+              <Image src={OrderStatus} width={140} height={200} alt="Rundoo order status" layout="responsive" priority />
             </div>
           </div>
         </div>

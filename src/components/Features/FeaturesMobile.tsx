@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import { Feature, FeatureType } from './RenderFeatures';
+import Feature from './Feature';
+import { PrimaryFeature } from '../../types/d';
 
 type FeaturesMobileProps = {
-  features: FeatureType[];
+  features: PrimaryFeature[];
 };
 function FeaturesMobile({ features }: FeaturesMobileProps) {
   return (

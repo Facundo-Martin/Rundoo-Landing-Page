@@ -1,20 +1,10 @@
-/* This example requires Tailwind CSS v2.0+ */
+import { HeroFeature } from '../../types/d';
+// icons
 import { ArrowSmallLeftIcon, ShoppingCartIcon, Square3Stack3DIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
-import {
-  ShoppingCartIcon as SolidShoppingCartIcon,
-  Square3Stack3DIcon as SolidSquare3Stack3DIcon,
-  TruckIcon as SolidTruckIcon,
-  UserGroupIcon as SolidUserGroupIcon,
-} from '@heroicons/react/24/solid';
-import { SVGProps } from 'react';
+import { ShoppingCartIcon as SolidShoppingCartIcon, Square3Stack3DIcon as SolidSquare3Stack3DIcon } from '@heroicons/react/24/solid';
+import { TruckIcon as SolidTruckIcon, UserGroupIcon as SolidUserGroupIcon } from '@heroicons/react/24/solid';
 
-type Feature = {
-  name: string;
-  description: string;
-  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-  hoverIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-};
-const features: Feature[] = [
+const features: HeroFeature[] = [
   {
     name: 'Wide range of materials',
     description:
@@ -43,9 +33,12 @@ const features: Feature[] = [
   },
 ];
 
-export default function Example({ setShowMore }: { setShowMore: (showMore: boolean) => void }) {
+type HeroLearnMore = {
+  setShowMore: (showMore: boolean) => void;
+};
+export default function HeroLearnMore({ setShowMore }: HeroLearnMore) {
   return (
-    <div className="section  py-12">
+    <div className="section py-12">
       <button onClick={() => setShowMore(false)} className="mb-4">
         <div className="flex items-center gap-2 group">
           <ArrowSmallLeftIcon className="w-7 group-hover:-translate-x-[6px] transition-all ease-in-out duration-700 transform" />

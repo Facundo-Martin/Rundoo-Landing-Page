@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import AndrewBeckman from '../images/Team/AndrewBeckman.jpeg';
 import DennisWanjiru from '../images/Team/DennisWanjiru.jpeg';
 import GeorgeYounger from '../images/Team/GeorgeYounger.jpeg';
@@ -11,14 +10,7 @@ import ShlokaReddy from '../images/Team/ShlokaReddy.jpeg';
 import UmerSiddiqui from '../images/Team/UmerSiddiqui.jpeg';
 import ZacharyIsaac from '../images/Team/ZacharyIsaac.jpeg';
 
-export interface Person {
-  name: string;
-  avatar: StaticImageData;
-  role: string;
-  since: number;
-  socials: { twitter?: string; github?: string; linkedin: string };
-}
-export const team: Person[] = [
+export const team = [
   {
     name: 'Nick Hershey',
     avatar: NickHershey,
@@ -95,5 +87,28 @@ export const team: Person[] = [
     role: 'Software Engineer',
     since: 2022,
     socials: { twitter: '', github: '', linkedin: 'https://www.linkedin.com/in/aguilar-santiago/' },
+  },
+];
+
+export const faqs = [
+  {
+    question: 'What is Rundoo?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+  {
+    question: 'How does it work?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+  {
+    question: 'What features are included?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+  {
+    question: 'How do I sign up?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
   },
 ];
