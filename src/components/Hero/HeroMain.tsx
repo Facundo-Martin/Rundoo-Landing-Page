@@ -55,10 +55,10 @@ function HeroMain({ setShowMore }: HeroMainProps) {
         </div>
         <div className="relative flex-1 flex-shrink-0 w-[30rem] mt-24 lg:mt-0 h-[30rem]">
           <div className="lg:hidden">
-            <div className="h-full w-80 absolute -bottom-14 left-6 ">
+            <div className="h-full w-60 absolute -bottom-14 left-20 ">
               <Image src={OrderStatus} width={140} height={200} alt="Rundoo order status" layout="responsive" priority />
             </div>
-            <div className="h-full w-80 absolute right-6 -top-4">
+            <div className="h-full w-60 absolute right-16 -top-4">
               <Image src={BrowseSupplies} width={140} height={200} alt="Rundoo browse supplies" layout="responsive" priority />
             </div>
           </div>
