@@ -143,7 +143,7 @@ export default function Footer() {
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-base text-gray-400">
               &copy; {new Date().getFullYear()}{' '}
-              <a href="https://facundomartin.io" target="_blank" rel="referrer" className="font-medium underline">
+              <a href="https://facundomartin.io" target="_blank" rel="noreferrer" className="font-medium underline">
                 Facundo Martin
               </a>{' '}
               for Rundoo
