@@ -2,7 +2,8 @@ import FeaturesTitle from './FeaturesTitle';
 import FeaturesMobile from './FeaturesMobile';
 import FeaturesDesktop from './FeaturesDesktop';
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
-import RundooOrderStatus from '../../images/RundooOrderStatus.png';
+import RundooExplore from '../../images/RundooExplore.png';
+import RundooOrderTracking from '../../images/RundooOrderTracking.png';
 import { ShoppingCartIcon, Square3Stack3DIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
 const features = [
@@ -15,13 +16,13 @@ const features = [
   {
     name: 'Inventory',
     summary: 'Browse hundreds of products and order them with just a few clicks',
-    image: RundooOrderStatus,
+    image: RundooExplore,
     icon: WrenchScrewdriverIcon,
   },
   {
     name: 'Tracking',
     summary: 'Track you order status with your team as well as your order history',
-    image: RundooOrderStatus,
+    image: RundooOrderTracking,
     icon: ShoppingCartIcon,
   },
 ];
