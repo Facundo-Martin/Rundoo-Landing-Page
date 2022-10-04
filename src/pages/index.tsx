@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Rundoo</title>
-        <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sint!" />
+        <meta name="description" content="Rundoo is a mobile app where you can order your contruction supplies" />
       </Head>
       <Layout>
         <ClientOnly>

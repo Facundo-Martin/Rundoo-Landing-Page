@@ -12,6 +12,9 @@
   .section {
     @apply mx-auto py-16 px-4 sm:px-8 md:px-12 lg:px-16;
   }
+  .slide-hero {
+    @apply absolute top-0 left-0 right-0 flex items-center justify-center transition-all ease-in-out duration-1000 transform;
+  }
 }
 #__next {
   min-height: 100%;
