@@ -20,7 +20,6 @@ function HeroMain({ setShowMore }: HeroMainProps) {
           <h1 className="font-extrabold text-4xl sm:text-5xl xl:text-6xl sm:text-center lg:text-left relative tracking-tight">
             Start Ordering Your<br></br>Supplies Online
           </h1>
-
           <div className="flex max-w-sm items-center lg:max-w-lg">
             <div className="flex flex-shrink-0">
               <img src="https://cdn.devdojo.com/tails/avatars/010.jpg" className="rounded-full w-12 h-12 border-2 border-white" />
@@ -32,7 +31,6 @@ function HeroMain({ setShowMore }: HeroMainProps) {
               online!
             </p>
           </div>
-
           <div className="w-full flex sm:flex-row flex-col sm:justify-center lg:justify-start font-medium sm:space-x-5 space-y-4 sm:space-y-0">
             <ComingSoonModal
               button={
@@ -41,7 +39,6 @@ function HeroMain({ setShowMore }: HeroMainProps) {
                 </div>
               }
             />
-
             <button
               onClick={() => setShowMore(true)}
               className="px-6 flex items-center py-3 bg-gray-100 border-2 border-gray-200/60 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
@@ -57,22 +54,21 @@ function HeroMain({ setShowMore }: HeroMainProps) {
             </button>
           </div>
         </div>
-
         <div className="relative flex-1 flex-shrink-0 w-[30rem] mt-24 lg:mt-0 h-[30rem]">
           <div className="lg:hidden">
             <div className="h-full w-80 absolute -bottom-14 left-6 ">
-              <Image src={OrderStatus} width={140} height={200} alt="" layout="responsive" />
+              <Image src={OrderStatus} width={140} height={200} alt="Rundoo order status" layout="responsive" priority />
             </div>
             <div className="h-full w-80 absolute right-6 -top-4">
-              <Image src={BrowseSupplies} width={140} height={200} alt="" layout="responsive" />
+              <Image src={BrowseSupplies} width={140} height={200} alt="Rundoo browse supplies" layout="responsive" priority />
             </div>
           </div>
           <div className="hidden lg:block drop-shadow-xl ">
             <div className="h-full w-80 absolute -bottom-14 hover:-translate-x-4 transform duration-700">
-              <Image src={BrowseSupplies} width={140} height={200} alt="" layout="responsive" />
+              <Image src={BrowseSupplies} width={140} height={200} alt="Rundoo browse supplies" layout="responsive" priority />
             </div>
             <div className="h-full w-80 absolute right-5 -top-0 hover:-translate-x-4 transform duration-700">
-              <Image src={OrderStatus} width={140} height={200} alt="" layout="responsive" />
+              <Image src={OrderStatus} width={140} height={200} alt="Rundoo order status" layout="responsive" priority />
             </div>
           </div>
         </div>
