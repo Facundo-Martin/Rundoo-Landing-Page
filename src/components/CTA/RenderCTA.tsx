@@ -1,7 +1,6 @@
-import React from 'react';
+import Image from 'next/image';
 import AppStoreDownload from '../../images/AppStoreDownload.svg';
 import GooglePlayDownload from '../../images/GooglePlayDownload.png';
-import Image from 'next/image';
 
 function RenderCTA() {
   return (
