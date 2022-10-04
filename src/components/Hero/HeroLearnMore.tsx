@@ -1,4 +1,4 @@
-/* This example requires Tailwind CSS v2.0+ */
+import { HeroFeature } from '../../types/d';
 import { ArrowSmallLeftIcon, ShoppingCartIcon, Square3Stack3DIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import {
   ShoppingCartIcon as SolidShoppingCartIcon,
@@ -6,15 +6,8 @@ import {
   TruckIcon as SolidTruckIcon,
   UserGroupIcon as SolidUserGroupIcon,
 } from '@heroicons/react/24/solid';
-import { SVGProps } from 'react';
 
-type Feature = {
-  name: string;
-  description: string;
-  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-  hoverIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
-};
-const features: Feature[] = [
+const features: HeroFeature[] = [
   {
     name: 'Wide range of materials',
     description:
