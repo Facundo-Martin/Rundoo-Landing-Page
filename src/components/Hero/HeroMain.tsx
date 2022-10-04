@@ -1,8 +1,7 @@
-import React from 'react';
+import Image from 'next/image';
 import ComingSoonModal from '../ComingSoonModal';
 import BrowseSupplies from '../../images/RundooBrowseSupplies.png';
 import OrderStatus from '../../images/RundooOrderStatus.png';
-import Image from 'next/image';
 
 type HeroMainProps = {
   setShowMore: (show: boolean) => void;
