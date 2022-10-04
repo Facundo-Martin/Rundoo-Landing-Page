@@ -26,12 +26,12 @@ export default function ContactMap() {
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
           <Marker position={center} />
         </GoogleMap>
-        {/* I don't feel like integrating the direction API now haha */}
+        {/* I don't feel like integrating the direction API so I'll just link to Google Maps directions */}
         <a
           href="https://goo.gl/maps/HYA6uSi2jh1tCp9D6"
           target="_blank"
           rel="noreferrer"
-          className="absolute z-100 bottom-0 left-2 bg-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-500/90 hover:text-white"
+          className="absolute z-100 bottom-0 left-2 bg-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-500/95 hover:text-white"
         >
           <p className="font-semibold">Get Directions</p>
         </a>

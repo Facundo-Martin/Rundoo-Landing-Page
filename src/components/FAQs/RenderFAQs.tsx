@@ -7,7 +7,7 @@ import team from '../../images/team.jpg';
 
 function RenderFAQs() {
   return (
-    <section id="FAQs" className="section wrapper h-[80vh]">
+    <section id="FAQs" className="section wrapper xl:h-[80vh]">
       <div className="mx-auto divide-gray-200">
         <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently asked questions</h2>
         <div className="xl:flex flex-row items-start justify-between gap-x-10 mt-20">
