@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import { Feature, FeatureType } from './RenderFeatures';
+import { FeatureType } from './RenderFeatures';
 import clsx from 'clsx';
 import { useState } from 'react';
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
 import RundooExplore from '../../images/RundooExplore.png';
 import RundooOrderTracking from '../../images/RundooOrderTracking.png';
+import Feature from './Feature';
 
 type FeatureProps = {
   features: FeatureType[];
