@@ -89,3 +89,26 @@ export const team = [
     socials: { twitter: '', github: '', linkedin: 'https://www.linkedin.com/in/aguilar-santiago/' },
   },
 ];
+
+export const faqs = [
+  {
+    question: 'What is Rundoo?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+  {
+    question: 'How does it work?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+  {
+    question: 'What features are included?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+  {
+    question: 'How do I sign up?',
+    answer:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
+  },
+];
