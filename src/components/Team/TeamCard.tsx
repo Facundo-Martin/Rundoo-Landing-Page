@@ -2,11 +2,7 @@ import Image from 'next/image';
 import { TeamMember } from '../../types/d';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../UI/SocialIcons';
 
-type SocialLinkProps = {
-  href?: string;
-  children: React.ReactNode;
-};
-function SocialLink({ href, children }: SocialLinkProps) {
+function SocialLink({ href, children }: { href?: string; children: React.ReactNode }) {
   const socialStyle = 'flex-1 block p-5 text-center text-gray-300 transition duration-200 ease-out hover:bg-gray-100 hover:text-gray-500';
   if (href) {
     return (
@@ -14,16 +10,12 @@ function SocialLink({ href, children }: SocialLinkProps) {
         {children}
       </a>
     );
-  } else {
-    return <div className={socialStyle}>{children}</div>;
   }
+  return <div className={socialStyle}>{children}</div>;
 }
-type TeamCardProps = {
-  member: TeamMember;
-};
-function TeamCard({ member }: TeamCardProps) {
-  const avatarURL = member.avatar ? member.avatar : null;
 
+function TeamCard({ member }: { member: TeamMember }) {
+  const avatarURL = member.avatar ? member.avatar : null;
   const memberprefix = member.role.includes('Co-Founder') ? 'Founding' : 'Team';
   return (
     <a
