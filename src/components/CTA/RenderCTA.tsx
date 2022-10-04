@@ -16,8 +16,8 @@ function RenderCTA() {
             <path
               d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z"
               fill="#FFF"
-              fill-rule="nonzero"
-              fill-opacity=".1"
+              fillRule="nonzero"
+              fillOpacity=".1"
               className=""
             ></path>
           </svg>

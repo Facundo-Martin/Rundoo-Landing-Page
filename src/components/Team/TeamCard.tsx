@@ -18,12 +18,7 @@ function TeamCard({ member }: { member: TeamMember }) {
   const avatarURL = member.avatar ? member.avatar : null;
   const memberprefix = member.role.includes('Co-Founder') ? 'Founding' : 'Team';
   return (
-    <a
-      href={member.socials.linkedin ? member.socials.linkedin : '#'}
-      target="_blank"
-      rel="noreferrer"
-      className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-2 transform duration-700"
-    >
+    <div className="w-full max-w-sm border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-2 transform duration-700">
       <div className="flex flex-col items-center justify-center p-10">
         <div className="w-24 h-24 rounded-full mb-4 overflow-hidden">
           {avatarURL ? (
@@ -50,7 +45,7 @@ function TeamCard({ member }: { member: TeamMember }) {
           <LinkedInIcon />
         </SocialLink>
       </div>
-    </a>
+    </div>
   );
 }
 

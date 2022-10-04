@@ -16,7 +16,6 @@ function FeaturesDesktop({ features }: FeatureProps) {
   const [isActive, setIsActive] = useState(0);
   const bringForward = 'z-50 transform scale-110 duration-700';
   const imageStyle = 'rounded-xl -mx-12';
-  console.log('isActive', isActive);
   return (
     <div className="hidden mt-20  lg:flex justify-between items-center gap-x-14">
       <div className="flex flex-col ">
