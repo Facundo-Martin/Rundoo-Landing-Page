@@ -6,12 +6,6 @@ import RundooOrderStatus from '../../images/RundooOrderStatus.png';
 import { StaticImageData } from 'next/image';
 import { ShoppingCartIcon, Square3Stack3DIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
-export type FeatureType = {
-  name: string | JSX.Element;
-  summary: string;
-  image: StaticImageData;
-  icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
-};
 const features = [
   {
     name: 'Suppliers',

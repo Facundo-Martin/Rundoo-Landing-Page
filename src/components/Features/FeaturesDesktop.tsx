@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import { FeatureType } from './RenderFeatures';
 import clsx from 'clsx';
 import { useState } from 'react';
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
 import RundooExplore from '../../images/RundooExplore.png';
 import RundooOrderTracking from '../../images/RundooOrderTracking.png';
 import Feature from './Feature';
+import { PrimaryFeature } from '../../types/d';
 
 type FeatureProps = {
-  features: FeatureType[];
+  features: PrimaryFeature[];
 };
 function FeaturesDesktop({ features }: FeatureProps) {
   const [isActive, setIsActive] = useState(0);

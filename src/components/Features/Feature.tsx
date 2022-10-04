@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
-import { FeatureType } from './RenderFeatures';
+import { PrimaryFeature } from '../../types/d';
 
 interface FeatureProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-  feature: FeatureType;
+  feature: PrimaryFeature;
   isActive?: boolean;
   className?: string;
 }
