@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { PrimaryFeature } from '../../types/d';
 import Feature from './Feature';
+import { PrimaryFeature } from '../../types/d';
 
 type FeaturesMobileProps = {
   features: PrimaryFeature[];

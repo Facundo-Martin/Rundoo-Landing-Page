@@ -1,11 +1,13 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { useState } from 'react';
+import Feature from './Feature';
+// types
+import { PrimaryFeature } from '../../types/d';
+// images
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
 import RundooExplore from '../../images/RundooExplore.png';
 import RundooOrderTracking from '../../images/RundooOrderTracking.png';
-import Feature from './Feature';
-import { PrimaryFeature } from '../../types/d';
 
 type FeatureProps = {
   features: PrimaryFeature[];

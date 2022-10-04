@@ -3,7 +3,6 @@ import FeaturesMobile from './FeaturesMobile';
 import FeaturesDesktop from './FeaturesDesktop';
 import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
 import RundooOrderStatus from '../../images/RundooOrderStatus.png';
-import { StaticImageData } from 'next/image';
 import { ShoppingCartIcon, Square3Stack3DIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
 const features = [

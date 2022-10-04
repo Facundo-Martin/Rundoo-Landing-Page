@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import React, { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import { PrimaryFeature } from '../../types/d';
+import clsx from 'clsx';
 
 interface FeatureProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   feature: PrimaryFeature;
