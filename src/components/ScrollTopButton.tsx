@@ -7,7 +7,6 @@ const ScrollTopButton = () => {
       behavior: 'smooth',
     });
   };
-
   return (
     <section className="wrapper w-full flex justify-end px-10 xl:px-2">
       <button onClick={scrollToTop}>

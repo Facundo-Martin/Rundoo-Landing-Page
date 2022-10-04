@@ -14,6 +14,8 @@ const center = {
 export default function ContactMap() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
+    // Couldn't get this stupid thing to work on .env.local
+    // Have tried this https://stackoverflow.com/questions/69461972/typescript-says-nextjs-environment-variables-are-undefined but could not make it work
     googleMapsApiKey: 'AIzaSyA8_4azs9OKZB4llcB4IntYA0kiym3kV1U',
   });
 
