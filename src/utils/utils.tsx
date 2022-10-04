@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import AndrewBeckman from '../images/Team/AndrewBeckman.jpeg';
 import DennisWanjiru from '../images/Team/DennisWanjiru.jpeg';
 import GeorgeYounger from '../images/Team/GeorgeYounger.jpeg';
@@ -11,14 +10,7 @@ import ShlokaReddy from '../images/Team/ShlokaReddy.jpeg';
 import UmerSiddiqui from '../images/Team/UmerSiddiqui.jpeg';
 import ZacharyIsaac from '../images/Team/ZacharyIsaac.jpeg';
 
-export interface Person {
-  name: string;
-  avatar: StaticImageData;
-  role: string;
-  since: number;
-  socials: { twitter?: string; github?: string; linkedin: string };
-}
-export const team: Person[] = [
+export const team = [
   {
     name: 'Nick Hershey',
     avatar: NickHershey,

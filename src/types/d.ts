@@ -14,3 +14,11 @@ export type PrimaryFeature = {
   image: StaticImageData;
   icon: (props: React.ComponentProps<'svg'>) => JSX.Element;
 };
+
+export interface TeamMember {
+  name: string;
+  avatar: StaticImageData;
+  role: string;
+  since: number;
+  socials: { twitter?: string; github?: string; linkedin: string };
+}
