@@ -18,7 +18,7 @@ function FeaturesMobile({ features }: FeaturesMobileProps) {
             className="flex flex-col items-center mx-auto max-w-sm mb-5"
             isActive
           />
-          <Image src={feature.image} alt="" height={650} width={420} />
+          <Image src={feature.image} alt={feature.name as string} height={650} width={420} />
         </div>
       ))}
     </div>
