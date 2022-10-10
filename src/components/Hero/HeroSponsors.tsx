@@ -5,10 +5,11 @@ import granite from '../../assets/Sponsors/granite.png';
 import martinmarietta from '../../assets/Sponsors/martinmarietta.png';
 import quanta from '../../assets/Sponsors/quanta.png';
 import vulcan from '../../assets/Sponsors/vulcan.png';
+import Section from '../Section';
 
 function HeroSponsors() {
   return (
-    <section className="section">
+    <Section>
       <h4 className="text-center text-2xl text-gray-500/90 font-medium mb-8">We work with</h4>
       <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
@@ -27,7 +28,7 @@ function HeroSponsors() {
           <Image src={vulcan} alt="Vulcan Materials Company" width={140} height={50} />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
