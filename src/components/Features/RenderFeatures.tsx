@@ -29,7 +29,7 @@ const features = [
 
 function RenderFeatures() {
   return (
-    <section id="features" aria-label="Features for simplifying everyday business tasks" className="bg-gradient-to-r from-blue-400 to-blue-500 lg:h-screen">
+    <section id="features" aria-label="Features for simplifying everyday business tasks" className="bg-gradient-to-r from-blue-400 to-blue-500 lg:min-h-screen">
       <div className="section wrapper">
         <FeaturesTitle />
         <FeaturesMobile features={features} />
