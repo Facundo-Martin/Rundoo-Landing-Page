@@ -131,10 +131,10 @@ export default function Footer() {
         <div className="flex justify-end pr-10 mt-6">
           <div className="flex items-center gap-1">
             <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="noreferrer">
-              <Image src={GooglePlayDownload} width={150} height={48} />
+              <Image src={GooglePlayDownload} width={150} height={48} alt="Download on Google Play Store" />
             </a>
             <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="noreferrer">
-              <Image src={AppStoreDownload} width={185} height={80} />
+              <Image src={AppStoreDownload} width={185} height={80} alt="Download on the App Store" />
             </a>
           </div>
         </div>
