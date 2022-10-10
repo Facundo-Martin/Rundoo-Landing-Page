@@ -40,12 +40,9 @@ function RenderCTA() {
           </div>
         </div>
         <div className="flex items-center h-full col-span-1 md:col-span-2">
-          <div></div>
-          <Image
-            src={Dashboard}
-            alt="Dashboard"
-            className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-none lg:mt-9"
-          />
+          <div className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-none lg:mt-9">
+            <Image src={Dashboard} alt="Dashboard" width={500} height={360} />
+          </div>
         </div>
       </div>
     </Section>
