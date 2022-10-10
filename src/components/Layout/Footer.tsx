@@ -59,7 +59,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="section wrapper global-style" aria-labelledby="footer-heading">
+    <footer className="section pb-2 wrapper global-style" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -138,9 +138,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-6 mt-4">
+        <div className="mx-auto px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8 border-t border-gray-200 pt-8">
           <div className="flex justify-center space-x-6 md:order-2"></div>
-          <div className="mt-8 md:order-1 md:mt-0">
+          <div className="md:order-1 md:mt-0">
             <p className="text-center text-base text-gray-400">
               &copy; {new Date().getFullYear()}{' '}
               <a href="https://facundomartin.io" target="_blank" rel="noreferrer" className="font-medium underline">
