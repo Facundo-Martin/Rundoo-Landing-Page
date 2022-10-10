@@ -2,10 +2,11 @@ import Image from 'next/image';
 import AppStoreDownload from '../../assets/AppStoreDownload.svg';
 import GooglePlayDownload from '../../assets/GooglePlayDownload.png';
 import Dashboard from '../../assets/dashboard.jpeg';
+import Section from '../Section';
 
 function RenderCTA() {
   return (
-    <section className="section wrapper">
+    <Section>
       <div
         className="relative grid items-center grid-cols-1 gap-10 p-12 overflow-hidden shadow-2xl md:p-16 lg:p-20 xl:p-24 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl md:grid-cols-5 lg:gap-0"
         data-primary="green-400"
@@ -47,7 +48,7 @@ function RenderCTA() {
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
