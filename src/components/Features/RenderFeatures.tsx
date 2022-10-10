@@ -5,6 +5,7 @@ import RundooBrowseSupplies from '../../assets/RundooBrowseSupplies.png';
 import RundooExplore from '../../assets/RundooExplore.png';
 import RundooOrderTracking from '../../assets/RundooOrderTracking.png';
 import { ShoppingCartIcon, Square3Stack3DIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
+import Section from '../Section';
 
 const features = [
   {
@@ -29,13 +30,17 @@ const features = [
 
 function RenderFeatures() {
   return (
-    <section id="features" aria-label="Features for simplifying everyday business tasks" className="bg-gradient-to-r from-blue-400 to-blue-500 lg:min-h-screen">
+    <Section
+      id="features"
+      aria-label="Features for simplifying everyday business tasks"
+      className="max-w-none bg-gradient-to-r from-blue-400 to-blue-500 lg:min-h-screen"
+    >
       <div className="section wrapper">
         <FeaturesTitle />
         <FeaturesMobile features={features} />
         <FeaturesDesktop features={features} />
       </div>
-    </section>
+    </Section>
   );
 }
 export default RenderFeatures;
