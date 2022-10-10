@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import AppStoreDownload from '../../assets/AppStoreDownload.svg';
 import GooglePlayDownload from '../../assets/GooglePlayDownload.png';
+import Dashboard from '../../assets/dashboard.jpeg';
 
 function RenderCTA() {
   return (
@@ -38,10 +39,11 @@ function RenderCTA() {
           </div>
         </div>
         <div className="flex items-center h-full col-span-1 md:col-span-2">
-          <img
-            src="https://cdn.devdojo.com/assets/march2021/dashboard.jpg"
-            className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-lg lg:mt-9"
+          <div></div>
+          <Image
+            src={Dashboard}
             alt="Dashboard"
+            className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-none lg:mt-9"
           />
         </div>
       </div>
