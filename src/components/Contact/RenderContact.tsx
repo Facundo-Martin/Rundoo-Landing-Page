@@ -1,5 +1,7 @@
 import React from 'react';
+import Section from '../Section';
 import ContactDetails from './ContactDetails';
+import ContactHero from './ContactHero';
 import ContactMap from './ContactMap';
 
 function Container({ children }: { children: React.ReactNode }) {
@@ -7,13 +9,13 @@ function Container({ children }: { children: React.ReactNode }) {
 }
 function RenderContact() {
   return (
-    <section id="contact" className="section wrapper">
-      <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-10">Contact Us</h2>
+    <Section id="contact">
+      <ContactHero />
       <Container>
         <ContactMap />
         <ContactDetails />
       </Container>
-    </section>
+    </Section>
   );
 }
 

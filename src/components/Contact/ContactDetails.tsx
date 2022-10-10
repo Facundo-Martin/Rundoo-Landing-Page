@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline';
 
 export default function ContactDetails() {
