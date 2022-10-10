@@ -21,9 +21,9 @@ function HeroMain({ setLearnMore }: HeroMainProps) {
           </h1>
           <div className="flex max-w-sm items-center lg:max-w-lg">
             <div className="flex flex-shrink-0">
-              <img src="https://cdn.devdojo.com/tails/avatars/010.jpg" className="rounded-full w-12 h-12 border-2 border-white" />
-              <img src="https://cdn.devdojo.com/tails/avatars/017.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" />
-              <img src="https://cdn.devdojo.com/tails/avatars/041.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" />
+              <img src="https://cdn.devdojo.com/tails/avatars/010.jpg" className="rounded-full w-12 h-12 border-2 border-white" alt="Contractor avatar" />
+              <img src="https://cdn.devdojo.com/tails/avatars/017.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" alt="Contractor avatar" />
+              <img src="https://cdn.devdojo.com/tails/avatars/041.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" alt="Contractor avatar" />
             </div>
             <p className="pl-3 lg:text-base text-xs">
               Join <span className="font-bold">23,000</span> other contractors and start ordering your <span className="font-bold">construction supplies</span>{' '}
