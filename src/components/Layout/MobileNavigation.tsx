@@ -65,12 +65,9 @@ export default function MobileNavigation() {
           >
             <nav>
               <MobileNavLink href="#features">Features</MobileNavLink>
-              <MobileNavLink href="#testimonials">Testimonials</MobileNavLink>
-              <MobileNavLink href="#pricing">Pricing</MobileNavLink>
-              <hr className="m-2 border-slate-300/40" />
-              <div className="flex justify-center p-2 cursor-pointer hover:bg-gray-50">
-                <ComingSoonModal button={<div>Sign in</div>} />
-              </div>
+              <MobileNavLink href="#team">Team</MobileNavLink>
+              <MobileNavLink href="#FAQs">FAQs</MobileNavLink>
+              <MobileNavLink href="#contact">Contact</MobileNavLink>
             </nav>
           </Popover.Panel>
         </Transition.Child>
