@@ -3,8 +3,8 @@ import HeroLearnMore from './HeroLearnMore';
 import HeroMain from './HeroMain';
 import HeroSponsors from './HeroSponsors';
 import clsx from 'clsx';
+import Section from '../Section';
 
-// Helper function to handle slide hero
 function SlideContainer() {
   const [learnMore, setLearnMore] = useState(false);
   const divHeight = learnMore ? 'h-[120vh] lg:h-[60vh]' : 'h-[105vh] lg:h-[60vh]';
@@ -22,10 +22,10 @@ function SlideContainer() {
 
 function RenderHero() {
   return (
-    <section className="section wrapper">
+    <Section>
       <SlideContainer />
       <HeroSponsors />
-    </section>
+    </Section>
   );
 }
 

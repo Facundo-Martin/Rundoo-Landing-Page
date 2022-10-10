@@ -1,3 +1,4 @@
+import { SVGProps } from 'react';
 import AndrewBeckman from '../assets/Team/AndrewBeckman.jpeg';
 import DennisWanjiru from '../assets/Team/DennisWanjiru.jpeg';
 import GeorgeYounger from '../assets/Team/GeorgeYounger.jpeg';
@@ -9,6 +10,7 @@ import SantiagoAguilar from '../assets/Team/SantiagoAguilar.jpeg';
 import ShlokaReddy from '../assets/Team/ShlokaReddy.jpeg';
 import UmerSiddiqui from '../assets/Team/UmerSiddiqui.jpeg';
 import ZacharyIsaac from '../assets/Team/ZacharyIsaac.jpeg';
+import { GithubIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from '../components/UI/SocialIcons';
 
 export const team = [
   {
@@ -112,3 +114,47 @@ export const faqs = [
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore. Molestiae pariatur aut nihil suscipit, inventore esse doloremque odit necessitatibus',
   },
 ];
+
+export const footerNavigation = {
+  solutions: [
+    { name: 'Marketing', href: '#' },
+    { name: 'Analytics', href: '#' },
+    { name: 'Commerce', href: '#' },
+    { name: 'Insights', href: '#' },
+  ],
+  support: [
+    { name: 'Pricing', href: '#' },
+    { name: 'Documentation', href: '#' },
+    { name: 'Guides', href: '#' },
+  ],
+  company: [
+    { name: 'About', href: 'https://www.linkedin.com/company/rundoo/' },
+    { name: 'Careers', href: 'https://jobs.ashbyhq.com/rundoo' },
+  ],
+  legal: [
+    { name: 'Privacy', href: 'https://www.getrundoo.com/privacy-policy' },
+    { name: 'Terms', href: 'https://www.getrundoo.com/privacy-policy' },
+  ],
+  social: [
+    {
+      name: 'Instagram',
+      href: 'https://www.linkedin.com/company/rundoo/',
+      icon: InstagramIcon,
+    },
+    {
+      name: 'Twitter',
+      href: 'https://www.linkedin.com/company/rundoo/',
+      icon: TwitterIcon,
+    },
+    {
+      name: 'GitHub',
+      href: 'https://www.linkedin.com/company/rundoo/',
+      icon: GithubIcon,
+    },
+    {
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/rundoo/',
+      icon: LinkedInIcon,
+    },
+  ],
+};

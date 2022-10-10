@@ -1,13 +1,14 @@
 import TeamTitle from './TeamTitle';
 import DisplayTeam from './DisplayTeam';
+import Section from '../Section';
 import { team } from '../../utils/data';
 
 function RenderTeam() {
   return (
-    <section id="team" className="section wrapper py-12 bg-white lg:py-24 tails-selected-element">
+    <Section id="team">
       <TeamTitle />
       <DisplayTeam team={team} />
-    </section>
+    </Section>
   );
 }
 

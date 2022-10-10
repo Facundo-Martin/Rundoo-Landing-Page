@@ -1,8 +1,6 @@
 import { Fragment } from 'react';
-import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import clsx from 'clsx';
-import ComingSoonModal from '../ComingSoonModal';
 
 type MobileNavLinkProps = {
   href: string;

@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import AppStoreDownload from '../../assets/AppStoreDownload.svg';
 import GooglePlayDownload from '../../assets/GooglePlayDownload.png';
+import Dashboard from '../../assets/dashboard.jpeg';
+import Section from '../Section';
 
 function RenderCTA() {
   return (
-    <section className="section wrapper">
+    <Section>
       <div
         className="relative grid items-center grid-cols-1 gap-10 p-12 overflow-hidden shadow-2xl md:p-16 lg:p-20 xl:p-24 bg-gradient-to-r from-blue-400 to-blue-500 rounded-2xl md:grid-cols-5 lg:gap-0"
         data-primary="green-400"
@@ -38,14 +40,15 @@ function RenderCTA() {
           </div>
         </div>
         <div className="flex items-center h-full col-span-1 md:col-span-2">
-          <img
-            src="https://cdn.devdojo.com/assets/march2021/dashboard.jpg"
-            className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-lg lg:mt-9"
+          <div></div>
+          <Image
+            src={Dashboard}
             alt="Dashboard"
+            className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-none lg:mt-9"
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

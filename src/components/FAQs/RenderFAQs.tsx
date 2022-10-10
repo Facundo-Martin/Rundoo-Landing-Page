@@ -4,10 +4,11 @@ import { faqs } from '../../utils/data';
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import team from '../../assets/team.jpg';
+import Section from '../Section';
 
 function RenderFAQs() {
   return (
-    <section id="FAQs" className="section wrapper xl:h-[80vh]">
+    <Section id="FAQs" className="xl:h-[80vh]">
       <div className="mx-auto divide-gray-200">
         <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Frequently asked questions</h2>
         <div className="xl:flex flex-row items-start justify-between gap-x-10 mt-20">
@@ -37,7 +38,7 @@ function RenderFAQs() {
           </dl>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
