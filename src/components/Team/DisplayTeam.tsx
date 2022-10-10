@@ -1,5 +1,5 @@
 import React from 'react';
-import { TeamMember } from '../../types/d';
+import { TeamMember } from '../../interfaces';
 import TeamCard from './TeamCard';
 
 type DisplayTeamProps = {

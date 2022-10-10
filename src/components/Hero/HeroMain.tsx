@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import ComingSoonModal from '../ComingSoonModal';
-import BrowseSupplies from '../../images/RundooBrowseSupplies.png';
-import OrderStatus from '../../images/RundooOrderStatus.png';
+import BrowseSupplies from '../../assets/RundooBrowseSupplies.png';
+import OrderStatus from '../../assets/RundooOrderStatus.png';
 
 type HeroMainProps = {
-  setShowMore: (show: boolean) => void;
+  setLearnMore: (learnMore: boolean) => void;
 };
-function HeroMain({ setShowMore }: HeroMainProps) {
+function HeroMain({ setLearnMore }: HeroMainProps) {
   return (
     <>
       <div className="left-0 h-auto w-1/2 top-1/2 -translate-y-1/2 transform rotate-180 absolute opacity-20">
@@ -21,9 +21,9 @@ function HeroMain({ setShowMore }: HeroMainProps) {
           </h1>
           <div className="flex max-w-sm items-center lg:max-w-lg">
             <div className="flex flex-shrink-0">
-              <img src="https://cdn.devdojo.com/tails/avatars/010.jpg" className="rounded-full w-12 h-12 border-2 border-white" />
-              <img src="https://cdn.devdojo.com/tails/avatars/017.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" />
-              <img src="https://cdn.devdojo.com/tails/avatars/041.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" />
+              <img src="https://cdn.devdojo.com/tails/avatars/010.jpg" className="rounded-full w-12 h-12 border-2 border-white" alt="Contractor avatar" />
+              <img src="https://cdn.devdojo.com/tails/avatars/017.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" alt="Contractor avatar" />
+              <img src="https://cdn.devdojo.com/tails/avatars/041.jpg" className="rounded-full -ml-5 w-12 h-12 border-2 border-white" alt="Contractor avatar" />
             </div>
             <p className="pl-3 lg:text-base text-xs">
               Join <span className="font-bold">23,000</span> other contractors and start ordering your <span className="font-bold">construction supplies</span>{' '}
@@ -39,7 +39,7 @@ function HeroMain({ setShowMore }: HeroMainProps) {
               }
             />
             <button
-              onClick={() => setShowMore(true)}
+              onClick={() => setLearnMore(true)}
               className="px-6 flex items-center py-3 bg-gray-100 border-2 border-gray-200/60 hover:border-gray-900 justify-center hover:bg-white transition-all ease-out duration-150 text-gray-900 rounded-xl text-lg"
             >
               <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

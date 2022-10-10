@@ -1,6 +1,6 @@
 import TeamTitle from './TeamTitle';
 import DisplayTeam from './DisplayTeam';
-import { team } from '../../utils/utils';
+import { team } from '../../utils/data';
 
 function RenderTeam() {
   return (

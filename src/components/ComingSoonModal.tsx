@@ -2,7 +2,7 @@ import React, { JSXElementConstructor, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import RundooLogo from '../images/RundooLogo.png';
+import RundooLogo from '../assets/RundooLogo.png';
 
 type ComingSoonModalProps = {
   button: JSX.Element;
@@ -31,7 +31,7 @@ function ComingSoonModal({ button }: ComingSoonModalProps) {
             <Dialog.Title className="text-center mb-4 text-3xl font-medium">Coming Soon!</Dialog.Title>
             <div className="grid h-44 place-items-center">
               <div className="flex items-center justify-center gap-2">
-                <Image src={RundooLogo} width={50} height={50} />
+                <Image src={RundooLogo} width={50} height={50} alt="Rundoo logo" />
                 <div className="max-w-xs">Our team is currently working on this feature.</div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { TeamMember } from '../../types/d';
+import { TeamMember } from '../../interfaces';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../UI/SocialIcons';
 
 function SocialLink({ href, children }: { href?: string; children: React.ReactNode }) {
@@ -22,7 +22,7 @@ function TeamCard({ member }: { member: TeamMember }) {
       <div className="flex flex-col items-center justify-center p-10">
         <div className="w-24 h-24 rounded-full mb-4 overflow-hidden">
           {avatarURL ? (
-            <Image src={avatarURL} width={150} height={150} layout="responsive" className="rounded-full  hover:scale-110 duration-700" />
+            <Image src={avatarURL} width={150} height={150} layout="responsive" className="rounded-full  hover:scale-110 duration-700" alt={member.name} />
           ) : (
             <div className="w-24 h-24 rounded-full mb-4 overflow-hidden bg-gray-300"></div>
           )}

@@ -3,11 +3,11 @@ import Image from 'next/image';
 import clsx from 'clsx';
 import Feature from './Feature';
 // types
-import { PrimaryFeature } from '../../types/d';
+import { PrimaryFeature } from '../../interfaces';
 // images
-import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
-import RundooExplore from '../../images/RundooExplore.png';
-import RundooOrderTracking from '../../images/RundooOrderTracking.png';
+import RundooBrowseSupplies from '../../assets/RundooBrowseSupplies.png';
+import RundooExplore from '../../assets/RundooExplore.png';
+import RundooOrderTracking from '../../assets/RundooOrderTracking.png';
 
 type FeatureProps = {
   features: PrimaryFeature[];

@@ -1,4 +1,4 @@
-import { HeroFeature } from '../../types/d';
+import { HeroFeature } from '../../interfaces';
 // icons
 import { ArrowSmallLeftIcon, ShoppingCartIcon, Square3Stack3DIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { ShoppingCartIcon as SolidShoppingCartIcon, Square3Stack3DIcon as SolidSquare3Stack3DIcon } from '@heroicons/react/24/solid';
@@ -34,12 +34,12 @@ const features: HeroFeature[] = [
 ];
 
 type HeroLearnMore = {
-  setShowMore: (showMore: boolean) => void;
+  setLearnMore: (learnMore: boolean) => void;
 };
-export default function HeroLearnMore({ setShowMore }: HeroLearnMore) {
+export default function HeroLearnMore({ setLearnMore }: HeroLearnMore) {
   return (
     <div className="section py-12">
-      <button onClick={() => setShowMore(false)} className="mb-4">
+      <button onClick={() => setLearnMore(false)} className="mb-4">
         <div className="flex items-center gap-2 group">
           <ArrowSmallLeftIcon className="w-7 group-hover:-translate-x-[6px] transition-all ease-in-out duration-700 transform" />
           <p className="text-lg">Go Back</p>

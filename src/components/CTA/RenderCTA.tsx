@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import AppStoreDownload from '../../images/AppStoreDownload.svg';
-import GooglePlayDownload from '../../images/GooglePlayDownload.png';
+import AppStoreDownload from '../../assets/AppStoreDownload.svg';
+import GooglePlayDownload from '../../assets/GooglePlayDownload.png';
 
 function RenderCTA() {
   return (
@@ -30,16 +30,16 @@ function RenderCTA() {
           </p>
           <div className="flex items-center gap-1">
             <a href="https://play.google.com/store/apps/details?id=com.runner.runner&hl=en_US&gl=US" target="_blank" rel="noreferrer">
-              <Image src={GooglePlayDownload} width={150} height={48} />
+              <Image src={GooglePlayDownload} width={150} height={48} alt="Download on Google Play Store" />
             </a>
             <a href="https://apps.apple.com/us/app/rundoo/id1530734240" target="_blank" rel="noreferrer">
-              <Image src={AppStoreDownload} width={185} height={80} />
+              <Image src={AppStoreDownload} width={185} height={80} alt="Download on the App Store" />
             </a>
           </div>
         </div>
         <div className="flex items-center h-full col-span-1 md:col-span-2">
           <img
-            src="https://cdn.devdojo.com/images/march2021/dashboard.jpg"
+            src="https://cdn.devdojo.com/assets/march2021/dashboard.jpg"
             className="relative top-0 right-0 object-cover w-full -mr-1 rounded md:max-w-sm md:w-auto max-w-none lg:absolute lg:max-w-md xl:max-w-lg lg:mt-9"
             alt="Dashboard"
           />

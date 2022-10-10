@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Rundoo from '../../images/Rundoo.svg';
+import Rundoo from '../../assets/Rundoo.svg';
 
 function Logo() {
   return (
     <Link href="/" aria-label="Home">
       <a>
         <div className="w-32 flex items-center justify-center bg-neutral-800/95 rounded-sm">
-          <Image src={Rundoo} width={80} height={50} />
+          <Image src={Rundoo} width={80} height={50} alt="Rundoo logo" />
         </div>
       </a>
     </Link>

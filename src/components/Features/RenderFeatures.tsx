@@ -1,9 +1,9 @@
 import FeaturesTitle from './FeaturesTitle';
 import FeaturesMobile from './FeaturesMobile';
 import FeaturesDesktop from './FeaturesDesktop';
-import RundooBrowseSupplies from '../../images/RundooBrowseSupplies.png';
-import RundooExplore from '../../images/RundooExplore.png';
-import RundooOrderTracking from '../../images/RundooOrderTracking.png';
+import RundooBrowseSupplies from '../../assets/RundooBrowseSupplies.png';
+import RundooExplore from '../../assets/RundooExplore.png';
+import RundooOrderTracking from '../../assets/RundooOrderTracking.png';
 import { ShoppingCartIcon, Square3Stack3DIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
 const features = [
@@ -29,7 +29,7 @@ const features = [
 
 function RenderFeatures() {
   return (
-    <section id="features" aria-label="Features for simplifying everyday business tasks" className="bg-gradient-to-r from-blue-400 to-blue-500 lg:h-screen">
+    <section id="features" aria-label="Features for simplifying everyday business tasks" className="bg-gradient-to-r from-blue-400 to-blue-500 lg:min-h-screen">
       <div className="section wrapper">
         <FeaturesTitle />
         <FeaturesMobile features={features} />

@@ -1,14 +1,14 @@
-import AndrewBeckman from '../images/Team/AndrewBeckman.jpeg';
-import DennisWanjiru from '../images/Team/DennisWanjiru.jpeg';
-import GeorgeYounger from '../images/Team/GeorgeYounger.jpeg';
-import JoeBosetti from '../images/Team/JoeBosetti.jpeg';
-import KelvinKariuki from '../images/Team/KelvinKariuki.jpeg';
-import NahomMarie from '../images/Team/NahomMarie.jpeg';
-import NickHershey from '../images/Team/NickHershey.jpeg';
-import SantiagoAguilar from '../images/Team/SantiagoAguilar.jpeg';
-import ShlokaReddy from '../images/Team/ShlokaReddy.jpeg';
-import UmerSiddiqui from '../images/Team/UmerSiddiqui.jpeg';
-import ZacharyIsaac from '../images/Team/ZacharyIsaac.jpeg';
+import AndrewBeckman from '../assets/Team/AndrewBeckman.jpeg';
+import DennisWanjiru from '../assets/Team/DennisWanjiru.jpeg';
+import GeorgeYounger from '../assets/Team/GeorgeYounger.jpeg';
+import JoeBosetti from '../assets/Team/JoeBosetti.jpeg';
+import KelvinKariuki from '../assets/Team/KelvinKariuki.jpeg';
+import NahomMarie from '../assets/Team/NahomMarie.jpeg';
+import NickHershey from '../assets/Team/NickHershey.jpeg';
+import SantiagoAguilar from '../assets/Team/SantiagoAguilar.jpeg';
+import ShlokaReddy from '../assets/Team/ShlokaReddy.jpeg';
+import UmerSiddiqui from '../assets/Team/UmerSiddiqui.jpeg';
+import ZacharyIsaac from '../assets/Team/ZacharyIsaac.jpeg';
 
 export const team = [
   {

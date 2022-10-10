@@ -6,15 +6,15 @@ import clsx from 'clsx';
 
 // Helper function to handle slide hero
 function SlideContainer() {
-  const [showMore, setShowMore] = useState(false);
-  const divHeight = showMore ? 'h-[100vh] lg:h-[60vh]' : 'h-[105vh] lg:h-[60vh]';
+  const [learnMore, setLearnMore] = useState(false);
+  const divHeight = learnMore ? 'h-[120vh] lg:h-[60vh]' : 'h-[105vh] lg:h-[60vh]';
   return (
     <div className={clsx(divHeight, 'overflow-hidden relative w-full')}>
-      <div className={clsx('slide-hero', showMore ? 'translate-x-full' : 'translate-x-0')}>
-        <HeroMain setShowMore={setShowMore} />
+      <div className={clsx('slide-hero', learnMore ? 'translate-x-full' : 'translate-x-0')}>
+        <HeroMain setLearnMore={setLearnMore} />
       </div>
-      <div className={clsx('slide-hero', showMore ? 'translate-x-0' : '-translate-x-full')}>
-        <HeroLearnMore setShowMore={setShowMore} />
+      <div className={clsx('slide-hero', learnMore ? 'translate-x-0' : '-translate-x-full')}>
+        <HeroLearnMore setLearnMore={setLearnMore} />
       </div>
     </div>
   );
