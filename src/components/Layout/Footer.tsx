@@ -2,8 +2,8 @@ import { SVGProps } from 'react';
 import Image from 'next/image';
 import Logo from '../UI/Logo';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../UI/SocialIcons';
-import AppStoreDownload from '../../images/AppStoreDownload.svg';
-import GooglePlayDownload from '../../images/GooglePlayDownload.png';
+import AppStoreDownload from '../../assets/AppStoreDownload.svg';
+import GooglePlayDownload from '../../assets/GooglePlayDownload.png';
 
 const navigation = {
   solutions: [

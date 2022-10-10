@@ -2,7 +2,7 @@ import React, { JSXElementConstructor, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import RundooLogo from '../images/RundooLogo.png';
+import RundooLogo from '../assets/RundooLogo.png';
 
 type ComingSoonModalProps = {
   button: JSX.Element;

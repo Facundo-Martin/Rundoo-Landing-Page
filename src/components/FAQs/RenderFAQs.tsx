@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import clsx from 'clsx';
-import { faqs } from '../../utils/utils';
+import { faqs } from '../../utils/data';
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import team from '../../images/team.jpg';
+import team from '../../assets/team.jpg';
 
 function RenderFAQs() {
   return (

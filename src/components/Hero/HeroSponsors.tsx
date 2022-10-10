@@ -1,10 +1,10 @@
 import Image from 'next/image';
 // images
-import eaglematerials from '../../images/Sponsors/eaglematerials.png';
-import granite from '../../images/Sponsors/granite.png';
-import martinmarietta from '../../images/Sponsors/martinmarietta.png';
-import quanta from '../../images/Sponsors/quanta.png';
-import vulcan from '../../images/Sponsors/vulcan.png';
+import eaglematerials from '../../assets/Sponsors/eaglematerials.png';
+import granite from '../../assets/Sponsors/granite.png';
+import martinmarietta from '../../assets/Sponsors/martinmarietta.png';
+import quanta from '../../assets/Sponsors/quanta.png';
+import vulcan from '../../assets/Sponsors/vulcan.png';
 
 function HeroSponsors() {
   return (

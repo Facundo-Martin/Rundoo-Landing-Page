@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Rundoo from '../../images/Rundoo.svg';
+import Rundoo from '../../assets/Rundoo.svg';
 
 function Logo() {
   return (

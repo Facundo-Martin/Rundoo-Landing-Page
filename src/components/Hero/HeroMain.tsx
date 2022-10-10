@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import ComingSoonModal from '../ComingSoonModal';
-import BrowseSupplies from '../../images/RundooBrowseSupplies.png';
-import OrderStatus from '../../images/RundooOrderStatus.png';
+import BrowseSupplies from '../../assets/RundooBrowseSupplies.png';
+import OrderStatus from '../../assets/RundooOrderStatus.png';
 
 type HeroMainProps = {
   setLearnMore: (learnMore: boolean) => void;

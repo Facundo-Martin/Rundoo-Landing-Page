@@ -1,4 +1,4 @@
-import { HeroFeature } from '../../types/d';
+import { HeroFeature } from '../../interfaces';
 // icons
 import { ArrowSmallLeftIcon, ShoppingCartIcon, Square3Stack3DIcon, TruckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { ShoppingCartIcon as SolidShoppingCartIcon, Square3Stack3DIcon as SolidSquare3Stack3DIcon } from '@heroicons/react/24/solid';

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { TeamMember } from '../../types/d';
+import { TeamMember } from '../../interfaces';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from '../UI/SocialIcons';
 
 function SocialLink({ href, children }: { href?: string; children: React.ReactNode }) {
