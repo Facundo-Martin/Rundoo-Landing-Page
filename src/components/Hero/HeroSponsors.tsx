@@ -18,8 +18,8 @@ function HeroSponsors() {
         <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
           <Image src={martinmarietta} alt="Martin Marietta " width={140} height={50} />
         </div>
-        <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-          <Image src={granite} alt="Granite" width={140} height={50} />
+        <div className="col-span-1 flex items-center justify-center md:col-span-2 lg:col-span-1">
+          <Image src={granite} alt="Granite" width={150} height={30} />
         </div>
         <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
           <Image src={quanta} alt="Quanta services" width={140} height={50} />
