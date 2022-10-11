@@ -7,7 +7,7 @@ import Section from '../Section';
 
 function SlideContainer() {
   const [learnMore, setLearnMore] = useState(false);
-  const divHeight = learnMore ? 'h-[120vh] lg:h-[60vh]' : 'h-[105vh] lg:h-[60vh]';
+  const divHeight = learnMore ? 'h-[120vh] lg:h-[70vh]' : 'h-[105vh] lg:h-[70vh]';
   return (
     <div className={clsx(divHeight, 'overflow-hidden relative w-full')}>
       <div className={clsx('slide-hero', learnMore ? 'translate-x-full' : 'translate-x-0')}>
